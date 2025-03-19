@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Brain, Database, LineChart, Search, Users, Bot, ArrowRight, Building2, ChevronRight, Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import ChatInterface from './components/ChatInterface';
 
 function App() {
+  // Prevent automatic scrolling when the app loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -9,13 +15,13 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <Brain className="w-8 h-8 text-emerald-600" />
-              <span className="text-xl font-bold">ESG<span className="text-emerald-600">ai</span></span>
+              <img src="/images/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-12 w-auto rounded-lg" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</a>
               <a href="#agents" className="text-gray-600 hover:text-gray-900 transition">Research</a>
               <a href="#demo" className="text-gray-600 hover:text-gray-900 transition">Demo</a>
+              <a href="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</a>
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
                 Support Our Research
               </button>
@@ -44,9 +50,9 @@ function App() {
               <button className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-700 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-emerald-200">
                 Join Our Vision <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 border border-gray-200">
-                Watch Demo <ChevronRight className="w-5 h-5" />
-              </button>
+              <a href="#demo" className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 border border-gray-200">
+                Try Demo <ChevronRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -205,46 +211,37 @@ function App() {
         </div>
       </div>
 
-      {/* Example Query Section */}
+      {/* Example Query Section - UPDATED DEMO SECTION */}
       <div id="demo" className="py-24 bg-gray-50 scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-                Early Results
+                Try Our ESG Analysis AI
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
               </h2>
               <p className="text-gray-600 text-lg">
-                Our prototype demonstrates promising capabilities in processing complex ESG queries
+                Experience our prototype AI system that can analyze and compare ESG reports from Indian companies
               </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition duration-300">
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                      <Users className="w-4 h-4 text-gray-600" />
-                    </div>
-                    <p className="text-lg font-medium text-gray-900">Sample Research Query</p>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                    "What are the differences between materiality assessment of HPCL and IOCL?"
-                  </div>
+            
+            {/* Chat Interface */}
+            <ChatInterface />
+            
+            <div className="mt-8 bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+              <h3 className="text-xl font-semibold mb-3 text-emerald-800">Suggested Queries</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
+                  "What are the key ESG metrics reported by Reliance Industries?"
                 </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-emerald-600" />
-                    </div>
-                    <p className="text-lg font-medium text-gray-900">Prototype Response</p>
-                  </div>
-                  <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-                    <p className="text-gray-700 leading-relaxed">
-                      Our AI system successfully analyzed the BRSR reports and sustainability documents, identifying key 
-                      differences in how these companies approach materiality assessment. This demonstrates the potential 
-                      for automated comparative analysis in ESG reporting.
-                    </p>
-                  </div>
+                <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
+                  "Compare the carbon emission reduction targets of Tata Steel and JSW Steel"
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
+                  "What materiality assessment process does HDFC Bank follow?"
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
+                  "Summarize Infosys's approach to diversity and inclusion"
                 </div>
               </div>
             </div>
@@ -276,8 +273,7 @@ function App() {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <Brain className="w-8 h-8 text-emerald-500" />
-                <span className="text-xl font-bold text-white">ESG<span className="text-emerald-500">ai</span></span>
+                <img src="/images/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
               </div>
               <p className="text-gray-400 leading-relaxed">
                 Exploring the future of ESG analysis through innovative AI research and multi-agent systems.
@@ -341,16 +337,16 @@ function App() {
               <h3 className="text-white font-semibold mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Get in Touch</a>
+                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Get in Touch</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Collaboration</a>
+                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Collaboration</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Support the Project</a>
+                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Support the Project</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Media Inquiries</a>
+                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Media Inquiries</a>
                 </li>
               </ul>
             </div>
