@@ -25,7 +25,7 @@ export default function Home() {
         <section className="py-20 md:py-32 text-center md:text-left md:flex md:items-center md:justify-between max-w-7xl mx-auto">
           <div className="md:max-w-2xl space-y-6">
             <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full font-medium text-sm mb-4">
-              AI-Pow
+              AI-Powered ESG Guidance
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Your Intelligent <span className="gradient-text">ESG Consultant</span> Companion
