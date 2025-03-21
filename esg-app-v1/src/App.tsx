@@ -15,13 +15,13 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <img src="/images/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-12 w-auto rounded-lg" />
+              <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</a>
               <a href="#agents" className="text-gray-600 hover:text-gray-900 transition">Research</a>
               <a href="#demo" className="text-gray-600 hover:text-gray-900 transition">Demo</a>
-              <a href="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</a>
+              <a href="/ai/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</a>
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
                 Support Our Research
               </button>
@@ -273,22 +273,22 @@ function App() {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <img src="/images/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
+                <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
               </div>
               <p className="text-gray-400 leading-relaxed">
                 Exploring the future of ESG analysis through innovative AI research and multi-agent systems.
               </p>
               <div className="flex items-center gap-4">
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="/ai/github" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="/ai/twitter" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="/ai/linkedin" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -299,16 +299,16 @@ function App() {
               <h3 className="text-white font-semibold mb-4">Research</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Paper</a>
+                  <a href="/ai/research-paper" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Paper</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Methodology</a>
+                  <a href="/ai/methodology" className="text-gray-400 hover:text-emerald-500 transition duration-300">Methodology</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Technical Documentation</a>
+                  <a href="/ai/technical-docs" className="text-gray-400 hover:text-emerald-500 transition duration-300">Technical Documentation</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Publications</a>
+                  <a href="/ai/publications" className="text-gray-400 hover:text-emerald-500 transition duration-300">Publications</a>
                 </li>
               </ul>
             </div>
@@ -318,16 +318,16 @@ function App() {
               <h3 className="text-white font-semibold mb-4">Team</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">About Us</a>
+                  <a href="/ai/about" className="text-gray-400 hover:text-emerald-500 transition duration-300">About Us</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Team</a>
+                  <a href="/ai/team" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Team</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Advisors</a>
+                  <a href="/ai/advisors" className="text-gray-400 hover:text-emerald-500 transition duration-300">Advisors</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Join Us</a>
+                  <a href="/ai/join" className="text-gray-400 hover:text-emerald-500 transition duration-300">Join Us</a>
                 </li>
               </ul>
             </div>
@@ -337,16 +337,16 @@ function App() {
               <h3 className="text-white font-semibold mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Get in Touch</a>
+                  <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Get in Touch</a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Collaboration</a>
+                  <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Collaboration</a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Support the Project</a>
+                  <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Support the Project</a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Media Inquiries</a>
+                  <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Media Inquiries</a>
                 </li>
               </ul>
             </div>
@@ -357,9 +357,9 @@ function App() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-400">© 2024 ESGai Research Project. All rights reserved.</p>
               <div className="flex gap-6">
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Terms of Use</a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Cookie Policy</a>
+                <a href="/ai/privacy" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Privacy Policy</a>
+                <a href="/ai/terms" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Terms of Use</a>
+                <a href="/ai/cookies" className="text-gray-400 hover:text-emerald-500 transition duration-300 text-sm">Cookie Policy</a>
               </div>
             </div>
           </div>
