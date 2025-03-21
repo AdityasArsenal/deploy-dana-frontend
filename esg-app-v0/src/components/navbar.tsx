@@ -37,31 +37,3 @@ export default function Navbar() {
     </header>
   )
 }
-
-//Grok
-
-// import Link from "next/link"
-// import { Button } from "@/components/ui/button"
-
-// export default function Navbar() {
-//   return (
-//     <header className="sticky top-0 z-50 w-full border-b border-gray-700 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/60">
-//       <div className="container flex h-16 items-center justify-between">
-//         <div className="flex items-center gap-2">
-//           <Link href="/" className="font-semibold text-xl text-orange-500">
-//             ESG Consultant
-//           </Link>
-//         </div>
-//         <nav className="flex items-center gap-4 text-white">
-//           <Link href="/" className="text-sm font-medium hover:text-orange-500">
-//             Home
-//           </Link>
-//           <Link href="/contact" className="text-sm font-medium hover:text-orange-500">
-//             Contact
-//           </Link>
-//           <Button size="sm">Sign In</Button>
-//         </nav>
-//       </div>
-//     </header>
-//   )
-// }

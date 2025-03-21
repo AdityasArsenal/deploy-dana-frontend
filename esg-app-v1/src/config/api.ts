@@ -5,7 +5,7 @@ const config = {
         apiUrl: 'http://localhost:8000/',
     },
     production: {
-        apiUrl: 'https://your-production-api-url.com', // Replace with your actual production API URL
+        apiUrl: 'http://localhost:8000/', // Replace with your actual production API URL
     },
 };
 
