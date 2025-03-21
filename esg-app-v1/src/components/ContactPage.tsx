@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Mail, Phone, MapPin, Github, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -9,8 +9,7 @@ const ContactPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <Brain className="w-8 h-8 text-emerald-600" />
-              <span className="text-xl font-bold">ESG<span className="text-emerald-600">ai</span></span>
+              <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="/" className="text-gray-600 hover:text-gray-900 transition">Home</a>
@@ -63,13 +62,10 @@ const ContactPage = () => {
                     Ph.D. in AI & Sustainability from IIT Delhi with 8+ years of experience in ESG analysis and AI research. Leading our vision to transform ESG data analysis through innovative AI solutions.
                   </p>
                   <div className="flex items-center gap-4">
-                    <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
-                      <Github className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://x.com/cryptorohittt" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://www.linkedin.com/in/cryptorohittt?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   </div>
@@ -91,10 +87,10 @@ const ContactPage = () => {
                     <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Github className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://x.com/AdityaP63481849" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://www.linkedin.com/in/aditya-patil-486962289/" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   </div>
@@ -204,8 +200,7 @@ const ContactPage = () => {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <Brain className="w-8 h-8 text-emerald-500" />
-                <span className="text-xl font-bold text-white">ESG<span className="text-emerald-500">ai</span></span>
+                <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
               </div>
               <p className="text-gray-400 leading-relaxed">
                 Exploring the future of ESG analysis through innovative AI research and multi-agent systems.
@@ -214,13 +209,13 @@ const ContactPage = () => {
                 <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="https://x.com/cryptorohittt" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/cryptorohittt?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+                <a href="mailto:cryptorohittt@gmail.com" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Brain, Database, LineChart, Search, Users, Bot, ArrowRight, Building2, ChevronRight, Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import ChatInterface from './components/ChatInterface';
+import { Link } from 'react-router-dom';
 
 function App() {
   // Prevent automatic scrolling when the app loads
@@ -21,7 +22,7 @@ function App() {
               <a href="#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</a>
               <a href="#agents" className="text-gray-600 hover:text-gray-900 transition">Research</a>
               <a href="#demo" className="text-gray-600 hover:text-gray-900 transition">Demo</a>
-              <a href="/ai/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</a>
+              <Link to="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</Link>
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
                 Support Our Research
               </button>
