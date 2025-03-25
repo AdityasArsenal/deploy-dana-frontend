@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
               <a href="/ai/github" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="/ai/twitter" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+              <a href="https://x.com/cryptorohittt" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="/ai/linkedin" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/cryptorohittt?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300 transform hover:scale-110">
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Team</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/ai/about" className="text-gray-400 hover:text-emerald-500 transition duration-300">About Us</a>
+                <a href="/ai/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">About Us</a>
               </li>
               <li>
                 <a href="/ai/team" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Team</a>

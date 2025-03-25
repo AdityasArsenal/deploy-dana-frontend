@@ -3,7 +3,7 @@ import { Users, Bot, Brain } from 'lucide-react';
 
 const AgentsSection: React.FC = () => {
   return (
-    <div id="agents" className="py-24 bg-gray-50 scroll-mt-16">
+    <div id="agents" className="py-24 bg-gray-50 scroll-mt-19">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">

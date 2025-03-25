@@ -3,10 +3,10 @@ import ChatInterface from './ChatInterface';
 
 const DemoSection: React.FC = () => {
   return (
-    <div id="demo" className="py-24 bg-gray-50 scroll-mt-16">
+    <div id="demo" className="py-20 bg-gray-50 scroll-mt-19">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
               Try Our ESG Analysis AI
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
@@ -20,16 +20,16 @@ const DemoSection: React.FC = () => {
             <h3 className="text-xl font-semibold mb-3 text-emerald-800">Suggested Queries</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
-                "What are the key ESG metrics reported by Reliance Industries?"
+                "How do HPCL and IOCL differ in their environmental priorities?"
               </div>
               <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
-                "Compare the carbon emission reduction targets of Tata Steel and JSW Steel"
+                "What social factors are most important for HPCL vs. IOCL?"
               </div>
               <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
-                "What materiality assessment process does HDFC Bank follow?"
+                "How do their governance practices compare in ESG assessments?"
               </div>
               <div className="bg-white p-4 rounded-lg border border-emerald-100 hover:border-emerald-300 transition cursor-pointer">
-                "Summarize Infosys's approach to diversity and inclusion"
+                "How do HPCL and IOCL engage stakeholders in ESG decisions?"
               </div>
             </div>
           </div>

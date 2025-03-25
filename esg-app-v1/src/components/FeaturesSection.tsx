@@ -16,7 +16,7 @@ const FeaturesSection: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-emerald-200 transition duration-300 transform hover:-translate-y-1">
-            <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
               <Building2 className="w-6 h-6 text-emerald-600" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Research Dataset</h3>
@@ -25,7 +25,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-emerald-200 transition duration-300 transform hover:-translate-y-1">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
               <Database className="w-6 h-6 text-blue-600" />
             </div>
             <h3 className="text-xl font-semibold mb-3">BRSR Analysis</h3>
@@ -34,7 +34,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-emerald-200 transition duration-300 transform hover:-translate-y-1">
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
               <LineChart className="w-6 h-6 text-purple-600" />
             </div>
             <h3 className="text-xl font-semibold mb-3">XBRL Integration</h3>
@@ -43,7 +43,7 @@ const FeaturesSection: React.FC = () => {
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-emerald-200 transition duration-300 transform hover:-translate-y-1">
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
               <Search className="w-6 h-6 text-orange-600" />
             </div>
             <h3 className="text-xl font-semibold mb-3">Prototype Queries</h3>

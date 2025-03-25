@@ -12,8 +12,6 @@ if "conversation_id" not in st.session_state:
 if "pdf_urls" not in st.session_state:
     st.session_state.pdf_urls = {}
 
-st.title("AI Chat Interface")
-
 def display_chat():
     for i, message in enumerate(st.session_state.messages):
         with st.chat_message(message["role"]):

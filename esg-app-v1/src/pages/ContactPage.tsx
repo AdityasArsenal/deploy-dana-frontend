@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactPage = () => {
   return (
@@ -9,13 +10,15 @@ const ContactPage = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
+              <Link to="/">
+                <img src="/ai/image/ESGai logo (500 x 150 px).png" alt="ESGai Logo" className="h-10 w-auto rounded-lg" />
+              </Link>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="/" className="text-gray-600 hover:text-gray-900 transition">Home</a>
-              <a href="/#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</a>
-              <a href="/#agents" className="text-gray-600 hover:text-gray-900 transition">Research</a>
-              <a href="/#demo" className="text-gray-600 hover:text-gray-900 transition">Demo</a>
+              <Link to="/" className="text-gray-600 hover:text-gray-900 transition">Home</Link>
+              <Link to="/#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</Link>
+              <Link to="/#agents" className="text-gray-600 hover:text-gray-900 transition">Research</Link>
+              <Link to="/#demo" className="text-gray-600 hover:text-gray-900 transition">Demo</Link>
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
                 Support Our Research
               </button>
@@ -25,7 +28,7 @@ const ContactPage = () => {
       </nav>
 
       {/* Contact Header */}
-      <div className="pt-24 bg-gradient-to-r from-emerald-50 to-teal-50">
+      <div className="pt-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
@@ -34,17 +37,17 @@ const ContactPage = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              We're excited to hear from you. Reach out to discuss collaboration, research opportunities, or just to say hello.
+            We're excited to hear from you! Reach out to discuss collaboration, research opportunities, or just to say hello at hello@cloufcraft.space.
             </p>
           </div>
         </div>
       </div>
 
       {/* Team Members */}
-      <div className="py-16 bg-white">
+      <div className="py-3 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center relative inline-block">
+            <h2 className="text-3xl font-bold mb-6 text-center relative inline-block">
               Meet Our Team
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
             </h2>
@@ -54,7 +57,7 @@ const ContactPage = () => {
               <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-4xl text-emerald-600 font-bold">RK</span>
+                    <img src="/ai/image/team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover"/>
                   </div>
                   <h3 className="text-2xl font-bold mb-1">Rohit kundliwal</h3>
                   <p className="text-emerald-600 font-medium mb-3">Founder & Lead Researcher</p>
@@ -76,7 +79,7 @@ const ContactPage = () => {
               <div className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-4xl text-emerald-600 font-bold">AP</span>
+                    <img src="/ai/image/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover"/>
                   </div>
                   <h3 className="text-2xl font-bold mb-1">Aditya Patil</h3>
                   <p className="text-emerald-600 font-medium mb-3">Lead Developer</p>
@@ -107,7 +110,7 @@ const ContactPage = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Contact Form */}
-              {/* <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
                 <form>
                   <div className="mb-4">
@@ -153,7 +156,7 @@ const ContactPage = () => {
                     Send Message
                   </button>
                 </form>
-              </div> */}
+              </div>
 
               {/* Contact Information */}
               <div>
@@ -164,13 +167,9 @@ const ContactPage = () => {
                       <Mail className="w-5 h-5 text-emerald-200" />
                       <span>cryptorohittt@gmail.com</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <Phone className="w-5 h-5 text-emerald-200" />
-                      <span>+91 6361677190</span>
-                    </div>
                     <div className="flex items-start gap-4">
                       <MapPin className="w-5 h-5 text-emerald-200 mt-1" />
-                      <span>bengaluru,karnataka,India - 560002</span>
+                      <span>bengaluru, India - 560002</span>
                     </div>
                   </div>
                 </div>
@@ -178,7 +177,7 @@ const ContactPage = () => {
                 <div className="bg-white p-8 rounded-2xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-6">Research Collaboration</h3>
                   <p className="text-gray-600 mb-4">
-                    Interested in collaborating with us? We're always looking for partners who share our vision for sustainable business practices and AI innovation.
+                  We're looking for investors who believe in our vision and want to be part of our journey. If you're interested in funding innovation and sustainable business growth, reach out to us!
                   </p>
                   <a 
                     href="#" 
@@ -263,9 +262,6 @@ const ContactPage = () => {
             <div>
               <h3 className="text-white font-semibold mb-4">Contact</h3>
               <ul className="space-y-3">
-                <li>
-                  <a href="/contact" className="text-gray-400 hover:text-emerald-500 transition duration-300">Get in Touch</a>
-                </li>
                 <li>
                   <a href="#" className="text-gray-400 hover:text-emerald-500 transition duration-300">Research Collaboration</a>
                 </li>

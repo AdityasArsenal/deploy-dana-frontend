@@ -5,15 +5,15 @@ const ChatInterface: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex flex-col h-[600px] bg-white rounded-xl shadow-xl border border-gray-200">
+    <div className="flex flex-col h-[460px] w-[900px] bg-white rounded-xl shadow-xl border border-gray-200">
       {/* Chat header */}
-      <div className="bg-emerald-600 text-white p-4 rounded-t-xl flex items-center gap-3">
-        <Brain className="w-6 h-6" />
-        <h3 className="font-semibold">ESGai Research Assistant</h3>
+      <div className="bg-emerald-600 text-white p-2 rounded-t-xl flex items-center gap-3">
+        <img src="\ai\image\icon.jpg" alt="ESGai Logo" className="w-10 h-10 rounded-lg" />
+        <h3 className="font-semibold">ESGai Demo (please wait 1-2 mins till we load)</h3>
       </div>
       
       {/* Embedded chat interface */}
-      <div className="flex-1 w-full h-full relative">
+      <div className="flex-1 w-full h-full relative rounded-b-xl overflow-hidden">
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-white">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div>
