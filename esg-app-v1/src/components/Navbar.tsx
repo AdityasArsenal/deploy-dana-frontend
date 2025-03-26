@@ -23,6 +23,9 @@ const Navbar: React.FC = () => {
             <a href="#demo" className="text-gray-600 hover:text-gray-900 transition">
               Demo
             </a>
+            <a href="https://docs.google.com/document/d/1hVm2ew2RGQED3HOu16icoqfER6291dTkeXkAL9R5gZY/edit?usp=sharing" className="text-gray-600 hover:text-gray-900 transition">
+              Whitepaper
+            </a>
             <Link to="/contact" className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
               Support Our Research
             </Link>
