@@ -5,7 +5,7 @@ import ContactPage from './pages/ContactPage';
 
 const AppRouter = () => {
   return (
-    <Router basename="/ai">
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />

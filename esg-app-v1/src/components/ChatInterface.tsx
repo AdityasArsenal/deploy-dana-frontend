@@ -8,8 +8,8 @@ const ChatInterface: React.FC = () => {
     <div className="flex flex-col h-[460px] w-[900px] bg-white rounded-xl shadow-xl border border-gray-200">
       {/* Chat header */}
       <div className="bg-emerald-600 text-white p-2 rounded-t-xl flex items-center gap-3">
-        <img src="\ai\image\icon.jpg" alt="ESGai Logo" className="w-10 h-10 rounded-lg" />
-        <h3 className="font-semibold">ESGai Demo (please wait 1-2 mins till we load)</h3>
+        <img src="\ai\image\icon.png" alt="ESGai Logo" className="w-10 h-10 rounded-lg" />
+        <h3 className="font-semibold">ESGai Demo ()</h3>
       </div>
       
       {/* Embedded chat interface */}
