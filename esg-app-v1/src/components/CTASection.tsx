@@ -7,7 +7,7 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join Us in Shaping the Future of ESG Analysis
+            Join us in Shaping the Future of ESG Analysis
           </h2>
           <p className="text-emerald-100 text-lg mb-12">
             We're seeking visionary partners and collaborators who share our belief in the transformative potential of AI in ESG analysis

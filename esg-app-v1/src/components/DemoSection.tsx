@@ -12,7 +12,7 @@ const DemoSection: React.FC = () => {
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
             </h2>
             <p className="text-gray-600 text-lg">
-              ESGai demo currently supports queries for 2 companies (HPCL and IOCL). Please give the tool a movement to load for the first time.
+              ESGai demo currently supports queries for 2 companies (HPCL and IOCL). Please give the tool a moment to load for the first time.
             </p>
           </div>
           <ChatInterface />

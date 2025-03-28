@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
               src="/ai/image/logo.png"
               alt="ESGai Logo"
               onClick={() => window.scrollTo(0, 0)}
-              className="h-10 w-auto rounded-lg hover:scale-105 transition duration-300 transform"
+              className="h-10 w-auto rounded-lg hover:scale-105 transition duration-300 transform cursor-pointer"
             />
           </div>
           <div className="hidden md:flex items-center gap-8">

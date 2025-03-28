@@ -58,7 +58,7 @@ const ContactPage = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {/* Founder */}
-              <div className="bg-gray-50 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
                     <img src="/ai/image/team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover"/>
@@ -80,7 +80,7 @@ const ContactPage = () => {
               </div>
 
               {/* Developer */}
-              <div className="bg-gray-50 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
                     <img src="/ai/image/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover"/>
@@ -109,37 +109,37 @@ const ContactPage = () => {
       </div>
 
       {/* Contact Information */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="flex justify-center">
-              <div className="max-w-md">
-                <div className="bg-emerald-700 p-8 rounded-2xl shadow-lg text-white mb-8">
-                  <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Contact Information Card */}
+              <div className="bg-emerald-700 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
                     <a href="https://mail.google.com/mail/?view=cm&to=esgai.space@gmail.com" target="_blank" rel="noopener noreferrer">
                       <Mail className="w-5 h-5 text-emerald-200 inline-block" /><span className="ml-4">esgai.space@gmail.com</span>
                     </a>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-5 h-5 text-emerald-200 mt-1" />
-                      <span>Bengaluru, India - 560002</span>
-                    </div>
-                    <div className="flex items-start gap-4 align-center">
-                    <a href="https://www.linkedin.com/in/cryptorohittt?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-5 h-5 text-emerald-200 inline-block mb-1" /><span className="ml-4">Rohit kundliwal</span>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <MapPin className="w-5 h-5 text-emerald-200 mt-1" />
+                    <span>Bengalore, India - 560002</span>
+                  </div>
+                  <div className="flex items-start gap-4 align-center">
+                    <a href="https://www.linkedin.com/company/106447186" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="w-5 h-5 text-emerald-200 inline-block mb-1" /><span className="ml-4">Connect on Linkedin</span>
                     </a>
-                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="bg-white p-8 rounded-2xl shadow-lg">
-                  <h3 className="text-2xl font-bold mb-6">Support Our Research</h3>
-                  <p className="text-gray-600 mb-4">
-                    We're looking for investors who believe in our vision of transforming ESG reporting using AI. If you are interested to learn more, please reach out to us on Email or Linkedin.
-                  </p>
-                </div>
+              {/* Support Our Research Card */}
+              <div className="bg-emerald-700 p-8 rounded-2xl shadow-lg text-white hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-6">Support Our Research</h3>
+                <p>
+                  We're looking for investors who believe in our vision of transforming ESG reporting using AI. If you are interested to learn more, please reach out to us on Email or Linkedin.
+                </p>
               </div>
             </div>
           </div>
