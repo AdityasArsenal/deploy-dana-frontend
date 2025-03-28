@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CTASection: React.FC = () => {
   return (
@@ -11,9 +12,10 @@ const CTASection: React.FC = () => {
           <p className="text-emerald-100 text-lg mb-12">
             We're seeking visionary partners and collaborators who share our belief in the transformative potential of AI in ESG analysis
           </p>
-          <button className="bg-white text-emerald-900 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-50 transition duration-300 transform hover:scale-105">
-            Support Our Research
-          </button>
+          <Link to="/contact" className="bg-white text-emerald-900 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-50 transition duration-300 transform hover:scale-105">
+              Support Our Research
+          </Link>
+         
         </div>
       </div>
     </div>

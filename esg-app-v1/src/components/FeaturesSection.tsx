@@ -7,7 +7,7 @@ const FeaturesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-            Current Research Scope
+            Research Scope
             <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
           </h2>
           <p className="text-gray-600 text-lg">

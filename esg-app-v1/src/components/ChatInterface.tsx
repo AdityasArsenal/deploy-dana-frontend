@@ -9,7 +9,7 @@ const ChatInterface: React.FC = () => {
       {/* Chat header */}
       <div className="bg-emerald-600 text-white p-2 rounded-t-xl flex items-center gap-3">
         <img src="\ai\image\icon.png" alt="ESGai Logo" className="w-10 h-10 rounded-lg" />
-        <h3 className="font-semibold">ESGai Demo ()</h3>
+        <h3 className="font-semibold">ESGai Demo (HPCL and IOCL companies only)</h3>
       </div>
       
       {/* Embedded chat interface */}

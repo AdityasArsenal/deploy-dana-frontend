@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
             Reimagining ESG Analysis<br />Through{' '}
             <span className="text-emerald-600 relative">
-              AI Innovation
+              AI Agents
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
             </span>
           </h1>
@@ -39,7 +39,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white"></div>
     </div>
   );
 };

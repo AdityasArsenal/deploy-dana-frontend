@@ -8,11 +8,11 @@ const DemoSection: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-              Try a demo of AI ESG Conlutant 
+              Demo
               <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
             </h2>
             <p className="text-gray-600 text-lg">
-              Our prototype currently only has HPCL and IOCL Data, Please give us a movement to load, The future of ESG Consultantcy.
+              ESGai demo currently supports queries for 2 companies (HPCL and IOCL). Please give the tool a movement to load for the first time.
             </p>
           </div>
           <ChatInterface />

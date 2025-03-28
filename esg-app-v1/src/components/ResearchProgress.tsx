@@ -18,7 +18,7 @@ const ResearchProgress: React.FC = () => {
             <div className="text-gray-600">Development Stage</div>
           </div>
           <div className="text-center transform hover:scale-105 transition duration-300">
-            <div className="text-4xl font-bold text-emerald-600 mb-2">85%</div>
+            <div className="text-4xl font-bold text-emerald-600 mb-2">98%</div>
             <div className="text-gray-600">Query Accuracy</div>
           </div>
         </div>

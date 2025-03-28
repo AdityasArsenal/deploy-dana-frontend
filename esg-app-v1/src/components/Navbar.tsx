@@ -8,9 +8,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <img
-              src="/ai/image/ESGai logo (500 x 150 px).png"
+              src="/ai/image/logo.png"
               alt="ESGai Logo"
-              className="h-10 w-auto rounded-lg"
+              onClick={() => window.scrollTo(0, 0)}
+              className="h-10 w-auto rounded-lg hover:scale-105 transition duration-300 transform"
             />
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -23,9 +24,7 @@ const Navbar: React.FC = () => {
             <a href="#demo" className="text-gray-600 hover:text-gray-900 transition">
               Demo
             </a>
-            <a href="https://docs.google.com/document/d/1hVm2ew2RGQED3HOu16icoqfER6291dTkeXkAL9R5gZY/edit?usp=sharing" className="text-gray-600 hover:text-gray-900 transition">
-              Whitepaper
-            </a>
+            <a href="https://docs.google.com/document/d/1hVm2ew2RGQED3HOu16icoqfER6291dTkeXkAL9R5gZY/edit?tab=t.tydd8cyqllp1" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition duration-300">White paper</a>
             <Link to="/contact" className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
               Support Our Research
             </Link>

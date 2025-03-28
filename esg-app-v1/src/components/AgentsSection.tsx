@@ -7,11 +7,11 @@ const AgentsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-            Our Research Breakthrough
+            Our AI Agents
             <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
           </h2>
           <p className="text-gray-600 text-lg">
-            We've developed three specialized AI agents that work together to analyze complex ESG data
+            We've developed 3 specialized AI agents that work together to analyze and report complex data from 1000s of reports.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
