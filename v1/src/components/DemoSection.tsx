@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatUI from './ChatUI';
+import ChatInterface from './ChatInterface';
 
 const DemoSection: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const DemoSection: React.FC = () => {
               ESGai demo currently supports queries for 2 companies (HPCL and IOCL). Please give the tool a moment to load for the first time.
             </p>
           </div>
-          <ChatUI />
+          <ChatInterface />
           <div className="mt-8 bg-emerald-50 p-6 rounded-xl border border-emerald-100">
             <h3 className="text-xl font-semibold mb-3 text-emerald-800">Suggested Queries</h3>
             <div className="grid md:grid-cols-2 gap-4">

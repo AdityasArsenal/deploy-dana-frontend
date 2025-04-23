@@ -20,8 +20,8 @@ const ChatUI: React.FC = () => {
     const [pdfUrls, setPdfUrls] = useState<Record<number, string>>({});
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    // Updated to use the proxied URL
-    const WEBHOOK_URL = "/api/chat";
+    // Backend URL (same as in ff.py)
+    const WEBHOOK_URL = "https://deploy-dana-production.up.railway.app/chat";
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -54,7 +54,7 @@ const ChatUI: React.FC = () => {
             const response = await fetch(WEBHOOK_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
             });
 
             if (response.ok) {
@@ -79,7 +79,6 @@ const ChatUI: React.FC = () => {
                 ]);
             }
         } catch (error) {
-            console.error("Fetch error:", error);
             setMessages(prev => [...prev,
             { role: 'assistant', content: `Network error: ${error}` }
             ]);

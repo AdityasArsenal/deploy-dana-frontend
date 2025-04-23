@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5",
     "lucide-react": "^0.344.0",
     "next": "^15.2.3",
     "react": "^19.0.0",
