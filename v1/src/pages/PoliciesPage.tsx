@@ -26,8 +26,8 @@ const PoliciesPage = () => {
               <Link to="/#vision" className="text-gray-600 hover:text-gray-900 transition">Our Vision</Link>
               <a href="https://docs.google.com/document/d/1hVm2ew2RGQED3HOu16icoqfER6291dTkeXkAL9R5gZY/edit?tab=t.tydd8cyqllp1" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition duration-300">Research</a>
               <Link to="/contact" className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
-              Support Our Research
-            </Link>
+                Support Our Research
+              </Link>
             </div>
           </div>
         </div>

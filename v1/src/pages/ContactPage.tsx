@@ -124,7 +124,7 @@ const ContactPage = () => {
                   </div>
                   <div className="flex items-start gap-4">
                     <MapPin className="w-5 h-5 text-emerald-200 mt-1" />
-                    <span>Bengalore, India - 560002</span>
+                    <span>Bengalore, India - 560051</span>
                   </div>
                   <div className="flex items-start gap-4 align-center">
                     <a href="https://www.linkedin.com/company/106447186" target="_blank" rel="noopener noreferrer">
