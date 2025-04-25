@@ -16,7 +16,7 @@ const ChatInterface: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null); // Ref for scrolling
 
-  const backendUrl = "http://localhost:8000/chat"; // Changed to local backend URL for development
+  const backendUrl = "https://esgai-backend-ewdvhyhde7gzcdcn.southindia-01.azurewebsites.net/chat"; // Changed back to deployed backend URL
 
   // Scroll to bottom effect
   useEffect(() => {

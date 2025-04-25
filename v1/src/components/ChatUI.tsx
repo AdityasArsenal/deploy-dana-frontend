@@ -21,7 +21,7 @@ const ChatUI: React.FC = () => {
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Backend URL (same as in ff.py)
-    const WEBHOOK_URL = "https://deploy-dana-production.up.railway.app/chat";
+    const WEBHOOK_URL = "https://esgai-backend-ewdvhyhde7gzcdcn.southindia-01.azurewebsites.net/chat";
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
