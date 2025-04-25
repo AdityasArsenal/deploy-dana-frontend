@@ -18,6 +18,7 @@ const ChatInterface: React.FC = () => {
 
   const backendUrl = "https://esgai-backend-ewdvhyhde7gzcdcn.southindia-01.azurewebsites.net/chat"; // Changed back to deployed backend URL
 
+
   // Scroll to bottom effect
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
