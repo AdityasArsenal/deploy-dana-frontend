@@ -43,9 +43,9 @@ jobs:
       - name: Login to Azure with OIDC
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0893FA3C93634F778D26A1AE0E61647B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_68FA8E1F7AC9449EB36F8161D1514DCD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0EE820497F0D4E029E0B02AAF33527A8 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Configure Federated Identity
         run: |
@@ -75,9 +75,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0893FA3C93634F778D26A1AE0E61647B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_68FA8E1F7AC9449EB36F8161D1514DCD }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0EE820497F0D4E029E0B02AAF33527A8 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID}}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID}}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
