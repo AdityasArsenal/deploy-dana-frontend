@@ -8,7 +8,7 @@ interface Message {
   pdfUrl?: string; // Optional PDF URL for user messages
 }
 
-const ChatInterface: React.FC = () => {
+const EmbeddedChatInterface: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState<string>('');
   const [conversationId, setConversationId] = useState<string | null>(null);
@@ -157,4 +157,4 @@ const ChatInterface: React.FC = () => {
   );
 };
 
-export default ChatInterface;
+export default EmbeddedChatInterface;

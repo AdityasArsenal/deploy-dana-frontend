@@ -16,6 +16,13 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -23,6 +30,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "../vite.config.ts"
+  ],
+  "references": []
 }

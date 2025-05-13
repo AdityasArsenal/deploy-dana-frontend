@@ -55,13 +55,13 @@ const ContactPage = () => {
               Team
               <span className="absolute bottom-0 left-0 h-1 bg-emerald-600/90 transform -skew-x-1"></span>
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {/* Founder */}
               <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <img src="/ai/image/team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover"/>
+                    <img src="/ai/image/team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Rohit Kundliwal</h3>
                   <p className="text-emerald-600 font-medium mb-5">Founder & Lead Researcher</p>
@@ -83,7 +83,7 @@ const ContactPage = () => {
               <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <img src="/ai/image/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover"/>
+                    <img src="/ai/image/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Aditya Patil</h3>
                   <p className="text-emerald-600 font-medium mb-5">Lead Developer</p>
@@ -94,10 +94,10 @@ const ContactPage = () => {
                     <a href="https://github.com/AdityasArsenal/deploy-dana-frontend" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Github className="w-5 h-5" />
                     </a>
-                    <a href="https://x.com/AdityaP63481849" target="_blank" rel="noopener noreferrer"   className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://x.com/AdityaP63481849" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="https://www.linkedin.com/in/aditya-patil-486962289/" target="_blank" rel="noopener noreferrer"className="text-gray-500 hover:text-emerald-600 transition duration-300">
+                    <a href="https://www.linkedin.com/in/aditya-patil-486962289/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-emerald-600 transition duration-300">
                       <Linkedin className="w-5 h-5" />
                     </a>
                   </div>
@@ -145,7 +145,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-            <Footer />
+      <Footer />
     </div>
   );
 };
