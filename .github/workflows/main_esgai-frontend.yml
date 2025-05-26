@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '20.x'
 
       - name: npm install, build, and test
         run: |
@@ -68,7 +68,7 @@ jobs:
         with:
           app-name: 'Esgai-frontend'
           slot-name: 'Production'
-          package: './dist'
+          package: '.'
 
 
           
