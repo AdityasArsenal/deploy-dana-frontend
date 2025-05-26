@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: read #This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v4
@@ -18,32 +18,16 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '22.x'
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Build application
-        run: npm run build
-
-      - name: Copy server files
+      - name: npm install, build, and test
         run: |
-          cp server.js dist/
-          cp package.json dist/
-          cp package-lock.json dist/
-          cp web.config dist/
-          mkdir -p dist/node_modules
-          cp -r node_modules/* dist/node_modules/
-
-      - name: Install production dependencies in dist
-        run: |
-          cd dist
-          npm install --production --legacy-peer-deps
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: |
-          cd dist
-          zip -r ../release.zip ./*
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -75,8 +59,8 @@ jobs:
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID}}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID}}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -84,7 +68,7 @@ jobs:
         with:
           app-name: 'Esgai-frontend'
           slot-name: 'Production'
-          package: '.'
+          package: './dist'
 
 
           
