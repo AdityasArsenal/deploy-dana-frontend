@@ -8,6 +8,27 @@ const ChatPage: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [conversationId, setConversationId] = useState<string | null>(null);
+    const [currentPdfUrl, setCurrentPdfUrl] = useState<string | null>(null);
+
+    const handleResetSession = () => {
+        setMessages([]);
+        setConversationId(null);
+        setCurrentPdfUrl(null);
+        setIsLoading(false); // Also reset loading state if any
+        // Optionally, add a greeting message after reset
+        // setMessages([
+        //     {
+        //         id: 'initial-greeting-reset',
+        //         text: 'Session reset. How can I help you?',
+        //         sender: 'ai',
+        //         timestamp: new Date(),
+        //     },
+        // ]);
+    };
+
+    const handlePageRefresh = () => {
+        window.location.reload();
+    };
 
     // useEffect(() => {
     //     // Initial greeting from AI
@@ -60,8 +81,13 @@ const ChatPage: React.FC = () => {
                 sender: 'ai',
                 timestamp: new Date(),
                 sources: data.sources || [],
+                pdfUrl: data.agents_conv_pdf_url || null
             };
             setMessages((prevMessages) => [...prevMessages, aiResponseMessage]);
+
+            if (data.agents_conv_pdf_url) {
+                setCurrentPdfUrl(data.agents_conv_pdf_url);
+            }
 
             if (data.conversation_id) {
                 setConversationId(data.conversation_id);
@@ -84,7 +110,7 @@ const ChatPage: React.FC = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
             <div style={{ flexShrink: 0, backgroundColor: 'black', borderBottom: '1px solid #4A4A4A' }}>
-                <Sidebar />
+                <Sidebar pdfUrl={currentPdfUrl} onResetSession={handleResetSession} onRefreshPage={handlePageRefresh} />
             </div>
 
             <div style={{ flexGrow: 1, display: 'flex', overflow: 'hidden' }}>

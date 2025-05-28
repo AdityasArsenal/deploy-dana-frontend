@@ -12,6 +12,7 @@ export interface Message {
     sender: 'user' | 'ai';
     sources?: MessageSource[];
     timestamp?: Date;
+    pdfUrl?: string;
 }
 
 interface ChatMessageProps {

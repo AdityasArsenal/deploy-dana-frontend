@@ -33,7 +33,7 @@ export function ChatUI({ messages, isLoading, onSend }: ChatUIProps) {
                         <div ref={messagesEndRef} />
                     </div>
                     {/* Input area fixed at the bottom */}
-                    <div className="p-4 bg-black">
+                    <div className="p-2 bg-black">
                         <SearchCard onSend={onSend} />
                     </div>
                 </div>
