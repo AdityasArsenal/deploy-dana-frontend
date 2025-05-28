@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Sidebar } from '@/components/ui/Sidebar'; // Reuse from PerplexityUI
+// import { Sidebar } from '@/components/ui/Sidebar'; // Removed Sidebar import
 // import { Footer } from '@/components/ui/Footer';   // Reuse from PerplexityUI
 import ChatHistory from '@/components/ui/ChatHistory';
 import { SearchCard } from '@/components/ui/SearchCard'; // We'll modify this next
@@ -20,9 +20,9 @@ export function ChatUI({ messages, isLoading, onSend }: ChatUIProps) {
     }, [messages, isLoading]);
 
     return (
-        <div className="flex h-screen w-full bg-black text-white font-sans">
-            {/* Sidebar on the left */}
-            <Sidebar />
+        <div className="flex h-full w-full bg-black text-white font-sans">
+            {/* Sidebar on the left - REMOVED */}
+            {/* <Sidebar /> */}
             {/* Main content area */}
             <div className="flex-1 flex flex-col">
                 {/* Chat content with fixed layout */}
