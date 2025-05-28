@@ -1,5 +1,7 @@
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export interface MessageSource {
     title: string;
@@ -34,8 +36,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
 
     return (
         <div className="article-body mb-10 w-full font-sans text-sm">
-            <div className="prose dark:prose-invert w-full prose-sm">
-                {message.text}
+            <div className="prose dark:prose-invert w-full prose-sm markdown-body">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.text}</ReactMarkdown>
             </div>
 
             {message.sources && message.sources.length > 0 && (

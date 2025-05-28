@@ -181,7 +181,7 @@ export function SearchCard({ onSend }: SearchCardProps) {
                                 <Mic size={14} />
                             </Button>
                             <Button
-                                className="ml-auto bg-green-300 text-black hover:bg-green-400 rounded-md hover:text-gray-800 hover:scale-105 transition-all duration-300 hover:shadow-lg"
+                                className="ml-auto bg-green-600 text-white hover:bg-green-400 rounded-md hover:text-black-800 hover:scale-105 transition-all duration-300 hover:shadow-lg"
                                 variant="ghost"
                                 size="sm"
                             >

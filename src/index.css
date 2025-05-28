@@ -131,3 +131,44 @@
     font-family: var(--font-sans);
   }
 }
+
+/* Markdown custom styles */
+.markdown-body p {
+  margin-bottom: 1.2em;
+  line-height: 1.9;
+}
+
+.markdown-body>*:not(:last-child) {
+  margin-bottom: 0.7em;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #888;
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: #222;
+  color: #fff;
+}
+
+.dark .markdown-body th {
+  background: #333;
+  color: #fff;
+}
+
+.markdown-body tr:nth-child(even) {
+  background: #f6f6f6;
+}
+
+.dark .markdown-body tr:nth-child(even) {
+  background: #222;
+}
