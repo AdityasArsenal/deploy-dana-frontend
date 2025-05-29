@@ -22,14 +22,9 @@ app.get('/health', (req, res) => {
 });
 
 // Catch-all handler for React Router - serves index.html for ALL routes
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     console.log(`Serving React app for route: ${req.path}`);
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
-app.get('/chat', (req, res) => {
-    console.log(`Serving React app for route: ${req.path}`);
-    res.sendFile(path.join(__dirname, 'dist', 'chat.html'));
 });
 
 const PORT = process.env.PORT || 8080;
@@ -39,3 +34,4 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`🔗 Frontend calls backend directly: esgai-backend-ewdvhyhde7gzcdcn.southindia-01.azurewebsites.net`);
 });
+

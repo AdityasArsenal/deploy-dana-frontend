@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
               Try Demo
             </a>
             <Link
-              to="/chat"
+              to="/contact"
               className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 border border-gray-200"
             >
               Join Our Vision <ChevronRight className="w-5 h-5" />
