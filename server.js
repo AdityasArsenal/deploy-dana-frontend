@@ -21,8 +21,23 @@ app.get('/health', (req, res) => {
     });
 });
 
-// Catch-all handler for React Router - serves index.html for ALL routes
-app.get('*', (req, res) => {
+// Specific routes for React Router pages (avoids * wildcard issues)
+app.get('/', (req, res) => {
+    console.log(`Serving React app for route: ${req.path}`);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.get('/chat', (req, res) => {
+    console.log(`Serving React app for route: ${req.path}`);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.get('/contact', (req, res) => {
+    console.log(`Serving React app for route: ${req.path}`);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.get('/about', (req, res) => {
     console.log(`Serving React app for route: ${req.path}`);
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
