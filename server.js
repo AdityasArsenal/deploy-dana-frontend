@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.get('/chat', (req, res) => {
     console.log(`Serving React app for route: ${req.path}`);
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    res.sendFile(path.join(__dirname, 'dist', 'chat.html'));
 });
 
 const PORT = process.env.PORT || 8080;
