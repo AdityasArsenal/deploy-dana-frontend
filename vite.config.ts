@@ -15,5 +15,6 @@ export default defineConfig({
   },
   server: {
     allowedHosts: ['338b-103-211-17-143.ngrok-free.app', 'https://esgai-frontend-fngrdkfke5h0aphb.eastus2-01.azurewebsites.net/', "https://esgai-frontend-fngrdkfke5h0aphb.eastus2-01.azurewebsites.net"],
+    port: parseInt(process.env.PORT || "8080"),
   },
 });
