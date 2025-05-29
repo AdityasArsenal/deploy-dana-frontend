@@ -45,9 +45,8 @@ app.all('/api/chat', async (req, res) => {
     }
 });
 
-// Catch-all handler for React Router - serves index.html for all routes
-app.get('/*', (req, res) => {
-    console.log(`Serving React app for route: ${req.path}`);
+// Catch-all handler for React Router - MUST be last
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
