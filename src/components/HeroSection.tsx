@@ -24,12 +24,12 @@ const HeroSection: React.FC = () => {
             We're a team of AI researchers exploring the potential of multi-agent systems to revolutionize ESG data analysis in India
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#demo"
+            <Link
+              to="/chat"
               className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex justify-center gap-2 shadow-lg shadow-emerald-200"
             >
-              Try Demo
-            </a>
+              Try Demo <ChevronRight className="w-5 h-5" />
+            </Link>
             <Link
               to="/contact"
               className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 border border-gray-200"
@@ -44,3 +44,7 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
+
+
+
+
