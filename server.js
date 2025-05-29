@@ -21,8 +21,14 @@ app.use('/api', createProxyMiddleware({
     }
 }));
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
 // For any request that doesn't match the above, send the index.html file
-app.get('*', (req, res) => {
+// Using a more specific pattern instead of '*' to avoid path-to-regexp issues
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
