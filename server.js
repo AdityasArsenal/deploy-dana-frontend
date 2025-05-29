@@ -14,32 +14,6 @@ app.use(express.json());
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Simple API proxy using fetch (no external dependencies)
-app.use('/api/*', async (req, res) => {
-    try {
-        const apiPath = req.path.replace('/api', '');
-        const targetUrl = `https://deploy-dana-production.up.railway.app${apiPath}`;
-
-        console.log(`Proxying ${req.method} ${req.path} -> ${targetUrl}`);
-
-        const response = await fetch(targetUrl, {
-            method: req.method,
-            headers: {
-                'Content-Type': 'application/json',
-                ...req.headers
-            },
-            body: req.method !== 'GET' ? JSON.stringify(req.body) : undefined
-        });
-
-        const data = await response.text();
-        res.status(response.status).send(data);
-
-    } catch (error) {
-        console.error('Proxy error:', error);
-        res.status(500).json({ error: 'Proxy error' });
-    }
-});
-
 // Health check endpoint
 app.get('/health', (req, res) => {
     res.status(200).json({
@@ -49,13 +23,36 @@ app.get('/health', (req, res) => {
     });
 });
 
-// For any request that doesn't match the above, send the index.html file
-app.get('*', (req, res) => {
+// API endpoints - simplified approach
+app.all('/api/chat', async (req, res) => {
+    try {
+        console.log(`API request: ${req.method} /api/chat`);
+
+        const response = await fetch('https://deploy-dana-production.up.railway.app/chat', {
+            method: req.method,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: req.method !== 'GET' ? JSON.stringify(req.body) : undefined
+        });
+
+        const data = await response.json();
+        res.json(data);
+
+    } catch (error) {
+        console.error('API proxy error:', error);
+        res.status(500).json({ error: 'API proxy error' });
+    }
+});
+
+// Catch-all handler for React Router - MUST be last
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`📁 Serving static files from: ${path.join(__dirname, 'dist')}`);
+    console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
