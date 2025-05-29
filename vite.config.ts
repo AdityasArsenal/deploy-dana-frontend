@@ -14,6 +14,6 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    allowedHosts: ['338b-103-211-17-143.ngrok-free.app'],
+    allowedHosts: ['338b-103-211-17-143.ngrok-free.app', 'https://esgai-frontend-fngrdkfke5h0aphb.eastus2-01.azurewebsites.net/', "https://esgai-frontend-fngrdkfke5h0aphb.eastus2-01.azurewebsites.net"],
   },
 });
