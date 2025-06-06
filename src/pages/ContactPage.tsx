@@ -17,7 +17,7 @@ const ContactPage = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <Link to="/">
-                <img src="/ai/image/logo.png" alt="ESGai Logo" className="h-10 w-auto rounded-lg hover:scale-105 transition duration-300 transform" />
+                <img src="/icons/logo.png" alt="ESGai Logo" className="h-10 w-auto rounded-lg hover:scale-105 transition duration-300 transform" />
               </Link>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -61,7 +61,7 @@ const ContactPage = () => {
               <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <img src="/ai/image/team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover" />
+                    <img src="team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Rohit Kundliwal</h3>
                   <p className="text-emerald-600 font-medium mb-5">Founder & Lead Researcher</p>
@@ -83,7 +83,7 @@ const ContactPage = () => {
               <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
-                    <img src="/ai/image/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover" />
+                    <img src="/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover" />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Aditya Patil</h3>
                   <p className="text-emerald-600 font-medium mb-5">Lead Developer</p>

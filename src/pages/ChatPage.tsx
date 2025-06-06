@@ -128,7 +128,8 @@ const ChatPage: React.FC = () => {
                             title="The loaded one "
                             width="100%"
                             height="100%"
-                            src="https://app.powerbi.com/view?r=eyJrIjoiOWQ1YWNiY2QtNmMyYi00NGFlLTg5MTgtMjc1MTBjY2VkMDg3IiwidCI6ImI0MzVhMDdkLTE0OTgtNDg1NC05ZTMyLTdjZjY4MmJlOGNmMyJ9"
+
+                            src="https://app.powerbi.com/view?r=eyJrIjoiNWI1M2MyZDgtZDJmNi00YmExLWJlODItY2VlOGQzM2Q0ZTQ2IiwidCI6ImI0MzVhMDdkLTE0OTgtNDg1NC05ZTMyLTdjZjY4MmJlOGNmMyJ9"
                             frameBorder="0"
                             allowFullScreen={true}
                             style={{ border: 'none' }}

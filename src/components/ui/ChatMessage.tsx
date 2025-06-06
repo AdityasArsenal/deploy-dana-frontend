@@ -27,7 +27,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     if (isUser) {
         return (
             <div className="border-b border-gray-200 dark:border-gray-800 pb-3 mb-4 w-full font-sans">
-                <div className="text-xs md:text-sm font-medium text-white">
+                <div className="text-xs font-medium text-white">
                     {message.text}
                 </div>
             </div>
@@ -35,8 +35,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     }
 
     return (
-        <div className="article-body mb-10 w-full font-sans text-sm">
-            <div className="prose dark:prose-invert w-full prose-sm markdown-body">
+        <div className="article-body mb-10 w-full font-sans text-xs">
+            <div className="prose dark:prose-invert w-full prose-xs markdown-body">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.text}</ReactMarkdown>
             </div>
 
@@ -50,7 +50,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
                                     href={source.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-400 hover:underline"
+                                    className="text-blue-400 hover:underline text-xs"
                                 >
                                     {source.title}
                                 </a>
