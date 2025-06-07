@@ -29,7 +29,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                 </Button>
                 <Button
                     variant="ghost"
-                    className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
+                    className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md"
                 >
                     <Search strokeWidth={2} size={23} />
                     <span className="text-xs font-medium ml-1.5">Home</span>
@@ -37,7 +37,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                 <div className="relative group inline-block">
                     <Button
                         variant="ghost"
-                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
+                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md"
                     >
                         <Database strokeWidth={2} size={23} />
                         <span className="text-xs font-medium ml-1.5">Sectors</span>
@@ -50,7 +50,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                 <div className="relative group inline-block">
                     <Button
                         variant="ghost"
-                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
+                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md"
                     >
                         <Settings strokeWidth={2} size={23} />
                         <span className="text-xs font-medium ml-1.5">Settings</span>

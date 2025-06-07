@@ -38,7 +38,7 @@ const ContactPage = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Founder */}
-              <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <div className="p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover-neon relative">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
                     <img src="team/rohit.jpg" alt="Rohit Kundliwal" className="w-32 h-32 rounded-full object-cover" />
@@ -60,7 +60,7 @@ const ContactPage = () => {
               </div>
 
               {/* Developer */}
-              <div className="bg-gray-70 p-4 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <div className="p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-border/50 hover-neon relative">
                 <div className="flex flex-col items-center text-center mb-6">
                   <div className="w-32 h-32 bg-emerald-100 rounded-full mb-4 flex items-center justify-center">
                     <img src="/team/aditya.jpg" alt="Aditya Patil" className="w-32 h-32 rounded-full object-cover" />

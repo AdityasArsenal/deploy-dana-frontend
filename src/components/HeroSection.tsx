@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/Button';
-import { Brain, CircuitBoard, Cpu, Leaf, Globe, Zap, Trees, Building2 } from 'lucide-react';
+import { Brain, CircuitBoard, Cpu, Globe, Zap, Building2 } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -61,24 +61,24 @@ const HeroSection = () => {
           {/* Agent indicators with StormSeek-inspired design */}
           <div className="flex justify-center items-center space-x-8 md:space-x-16">
             <div className="flex flex-col items-center floating-slow">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
-                <Brain className="w-10 h-10 text-primary-foreground" />
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/70 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <Brain className="w-10 h-10 text-white" />
               </div>
-              <span className="text-sm font-medium text-primary">Manager</span>
+              <span className="text-sm font-medium text-electric-cyan-500">Manager</span>
             </div>
             
             <div className="flex flex-col items-center floating-slow" style={{ animationDelay: '2s' }}>
-              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
-                <CircuitBoard className="w-10 h-10 text-primary-foreground" />
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/70 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <CircuitBoard className="w-10 h-10 text-white" />
               </div>
-              <span className="text-sm font-medium text-electric-cyan">Worker</span>
+              <span className="text-sm font-medium text-electric-cyan-500">Worker</span>
             </div>
-            
+          
             <div className="flex flex-col items-center floating-slow" style={{ animationDelay: '4s' }}>
-              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
-                <Cpu className="w-10 h-10 text-primary-foreground" />
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-primary/70 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <Cpu className="w-10 h-10 text-white" />
               </div>
-              <span className="text-sm font-medium text-soft-emerald">Director</span>
+              <span className="text-sm font-medium text-electric-cyan-500">Director</span>
             </div>
           </div>
         </div>

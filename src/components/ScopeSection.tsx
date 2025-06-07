@@ -1,10 +1,11 @@
 import React from 'react';
+import { Book, Search, Zap } from 'lucide-react';
 
 const scopeFeatures = [
   {
     icon: (
       <span className="inline-flex items-center justify-center w-10 h-10 bg-green-50 rounded-full mb-2">
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" className="text-green-600"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
+        <Search strokeWidth={2} size={25} color="green" />
       </span>
     ),
     title: 'Research Dataset',
@@ -13,7 +14,7 @@ const scopeFeatures = [
   {
     icon: (
       <span className="inline-flex items-center justify-center w-10 h-10 bg-blue-50 rounded-full mb-2">
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-600"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+        <Book strokeWidth={2} size={25} color="blue" />
       </span>
     ),
     title: 'BRSR Analysis',
@@ -22,7 +23,7 @@ const scopeFeatures = [
   {
     icon: (
       <span className="inline-flex items-center justify-center w-10 h-10 bg-purple-50 rounded-full mb-2">
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" className="text-purple-600"><rect x="8" y="8" width="8" height="8" rx="1.5"/></svg>
+        <Book strokeWidth={2} size={25} color="purple" />
       </span>
     ),
     title: 'XBRL Integration',
@@ -31,7 +32,7 @@ const scopeFeatures = [
   {
     icon: (
       <span className="inline-flex items-center justify-center w-10 h-10 bg-orange-50 rounded-full mb-2">
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" className="text-orange-500"><circle cx="12" cy="12" r="6"/></svg>
+        <Zap strokeWidth={2} size={25} color="orange" />
       </span>
     ),
     title: 'Prototype Queries',
