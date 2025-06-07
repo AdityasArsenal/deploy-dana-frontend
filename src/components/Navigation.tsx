@@ -15,7 +15,6 @@ const Navigation = () => {
     { name: 'The Agents', href: '#agents' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'Roadmap', href: '#roadmap' },
-    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -27,43 +26,46 @@ const Navigation = () => {
         </div>
       )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold gradient-text">ESGai</div>
+        <div className="flex items-center h-16">
+          
+        <div className="hidden md:block flex items-center gap-4">
+            {/* ESGai logo top right, clickable and refreshes page */}
+            <button
+              className="ml-4 focus:outline-none hover:scale-105 transition-transform"
+              onClick={() => window.location.reload()}
+              aria-label="Refresh page"
+              style={{ background: 'none', border: 'none', padding: 0 }}
+            >
+              <img
+                src="/icons/logo.png"
+                alt="ESGai Logo"
+                className="h-10 w-auto rounded-lg shadow-md"
+                style={{ display: 'inline-block' }}
+              />
+            </button>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-  item.name === 'Contact' ? (
-    <a
-      key={item.name}
-      href="/contact"
-      className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-    >
-      {item.name}
-    </a>
-  ) : (
-    <a
-      key={item.name}
-      href={item.href}
-      className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-    >
-      {item.name}
-    </a>
-  )
-))}
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <a href="/chat">
-  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">
-    Try out ESGai
-  </Button>
-</a>
-          </div>
-
+          {/* Spacer to push the button to the far right */}
+          <div className="flex-1" />
+          <a href="/contact">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">
+                Support Our Research
+              </Button>
+            </a>
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -87,7 +89,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-4 bg-primary text-primary-foreground  hover:bg-primary/90">
+              <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
                 Request Demo
               </Button>
             </div>

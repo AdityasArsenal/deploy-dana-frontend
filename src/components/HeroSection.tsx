@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/Button';
-import { Brain, CircuitBoard, Cpu, Globe, Zap, Building2 } from 'lucide-react';
+  import { Brain, CircuitBoard, Cpu, Globe, Zap, Building2 } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -50,11 +50,13 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-6 ">
-              Explore ESG Solutions
+            <a href="/chat">
+            <Button size="lg" className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-7 ">
+              Try out ESGai
             </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-6 hover:text-white transition-colors duration-200 font-medium ">
-              Request Demo
+            </a>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium ">
+              Sign In
             </Button>
           </div>
 
