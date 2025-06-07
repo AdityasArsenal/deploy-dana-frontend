@@ -1,28 +1,25 @@
-import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
+import Navigation from '../components/Navigation';
 import VisionSection from '../components/VisionSection';
-import ResearchProgress from '../components/ResearchProgress';
+import ScopeSection from '../components/ScopeSection';
+import HeroSection from '../components/HeroSection';
+import AboutSection from '../components/AboutSection'; 
 import AgentsSection from '../components/AgentsSection';
-import FeaturesSection from '../components/FeaturesSection';
-import DemoSection from '../components/DemoSection';
+import SolutionsSection from '../components/SolutionsSection';
+import RoadmapSection from '../components/RoadmapSection';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 
-const HomePage: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <div className="min-h-screen gradient-bg">
+      <Navigation />
       <HeroSection />
-      <VisionSection />
-      <ResearchProgress />
+      <AboutSection />
       <AgentsSection />
-      <FeaturesSection />
-      <DemoSection />
+      <SolutionsSection />
+      <RoadmapSection />
+      <VisionSection />
+      <ScopeSection />
       <CTASection />
       <Footer />
     </div>

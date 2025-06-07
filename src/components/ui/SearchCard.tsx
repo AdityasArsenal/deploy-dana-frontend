@@ -1,13 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/Card';
-import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Search, Globe, Clipboard, Mic, Plus, ArrowUp } from 'lucide-react';
 
 // Extend the Window interface for SpeechRecognition
 interface IWindow extends Window {
-    SpeechRecognition: any; // You can be more specific with the type if you have it
-    webkitSpeechRecognition: any; // You can be more specific with the type if you have it
+    SpeechRecognition: any;
+    webkitSpeechRecognition: any;
 }
 declare var window: IWindow;
 
@@ -19,6 +18,7 @@ export function SearchCard({ onSend }: SearchCardProps) {
     const [query, setQuery] = useState('');
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
     const [isRecording, setIsRecording] = useState(false);
     const recognitionRef = useRef<any | null>(null);
 
@@ -60,6 +60,14 @@ export function SearchCard({ onSend }: SearchCardProps) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // Auto-resize textarea
+    useEffect(() => {
+        if (textareaRef.current) {
+            textareaRef.current.style.height = 'auto';
+            textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+        }
+    }, [query]);
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (query.trim() || selectedFile) {
@@ -69,6 +77,13 @@ export function SearchCard({ onSend }: SearchCardProps) {
             if (fileInputRef.current) {
                 fileInputRef.current.value = "";
             }
+        }
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSubmit(e);
         }
     };
 
@@ -141,16 +156,19 @@ export function SearchCard({ onSend }: SearchCardProps) {
         <Card className="mb-3 font-sans shadow-xl">
             <CardContent className="p-0">
                 <form onSubmit={handleSubmit}>
-                    <div className="flex items-center rounded-t-lg overflow-hidden">
-                        <div className="flex-1 relative">
-                            <div className="absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    <div className="flex flex-col-reverse items-start rounded-t-lg overflow-hidden">
+                        <div className="flex-1 relative w-full">
+                            <div className="absolute left-2.5 top-3 text-gray-400 z-10">
                                 <Search size={15} />
                             </div>
-                            <Input
+                            <textarea
+                                ref={textareaRef}
                                 placeholder="Ask anything..."
-                                className="pl-8 text-sm rounded-none border-none bg-transparent text-white placeholder-gray-400 font-sans h-10"
+                                className="w-full pl-8 pr-3 py-2.5 text-sm border-none bg-transparent text-white placeholder-gray-400 font-sans resize-none overflow-y-auto min-h-[40px] max-h-[200px] focus:outline-none"
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
+                                onKeyDown={handleKeyDown}
+                                rows={1}
                             />
                             {selectedFile && (
                                 <div className="absolute right-2.5 top-1/2 transform -translate-y-1/2 text-xs text-gray-300 bg-gray-700 px-2 py-0.5 rounded">
@@ -168,22 +186,43 @@ export function SearchCard({ onSend }: SearchCardProps) {
                                 style={{ display: 'none' }}
                                 accept=".pdf,.xls,.xlsx,.jpeg,.jpg,.png,.gif,.xml"
                             />
-                            <Button variant="ghost" size="sm" onClick={handlePlusClick} type="button">
-                                <Plus size={14} />
-                            </Button>
-                            <Button variant="ghost" size="sm">
-                                <Globe size={14} />
-                            </Button>
+                            <div className="relative group inline-block">
+                                <Button variant="ghost" size="sm" type="button">
+                                    <Plus size={14} />
+                                </Button>
+                                <span className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                                    coming soon
+                                </span>
+                            </div>
+                            <div className="relative group inline-block">
+                                <Button variant="ghost" size="sm" type="button">
+                                    <Globe size={14} />
+                                </Button>
+                                <span className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                                    coming soon
+                                </span>
+                            </div>
                             <Button variant="ghost" size="sm" onClick={handlePasteFromClipboard} type="button">
                                 <Clipboard size={14} />
                             </Button>
-                            <Button variant="ghost" size="sm" onClick={handleMicClick} type="button" className={isRecording ? 'text-red-500' : ''}>
-                                <Mic size={14} />
-                            </Button>
+                            <div className="relative group inline-block">
+                                <Button
+                                    variant="ghost"
+                                    size="sm"
+                                    type="button"
+                                    className={isRecording ? 'text-red-500' : ''}
+                                >
+                                    <Mic size={14} />
+                                </Button>
+                                <span className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                                    coming soon
+                                </span>
+                            </div>
                             <Button
                                 className="ml-auto bg-green-600 text-white hover:bg-green-400 rounded-md hover:text-black-800 hover:scale-105 transition-all duration-300 hover:shadow-lg"
                                 variant="ghost"
                                 size="sm"
+                                type="submit"
                             >
                                 <ArrowUp size={14} />
                             </Button>

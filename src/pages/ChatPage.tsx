@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ChatUI } from '@/components/ChatUII';
+import { ChatUI } from '@/components/1ChatUII';
 import { Message } from '@/components/ui/ChatMessage';
-import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { Sidebar } from '@/components/ui/Sidebar';
+import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 
 const ChatPage: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>([]);

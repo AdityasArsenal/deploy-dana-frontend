@@ -1,20 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: ['class', 'class'], // Enables dark mode using CSS classes
+	darkMode: 'class', // Enables dark mode using CSS classes
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['IBM Plex Sans', 'sans-serif'],
-				serif: ['IBM Plex Serif', 'serif'],
-				mono: ['IBM Plex Mono', 'monospace'],
-			},
+        inter: ['Inter', 'sans-serif'],
+        sans: ['IBM Plex Sans', 'sans-serif'],
+        serif: ['IBM Plex Serif', 'serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+      },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			colors: {
+				'electric-cyan': 'hsl(var(--electric-cyan))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {

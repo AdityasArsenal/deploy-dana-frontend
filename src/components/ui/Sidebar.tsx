@@ -34,20 +34,31 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                     <Search strokeWidth={2} size={23} />
                     <span className="text-xs font-medium ml-1.5">Home</span>
                 </Button>
-                <Button
-                    variant="ghost"
-                    className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
-                >
-                    <Database strokeWidth={2} size={23} />
-                    <span className="text-xs font-medium ml-1.5">Sectors</span>
-                </Button>
-                <Button
-                    variant="ghost"
-                    className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
-                >
-                    <Settings strokeWidth={2} size={23} />
-                    <span className="text-xs font-medium ml-1.5">Settings</span>
-                </Button>
+                <div className="relative group inline-block">
+                    <Button
+                        variant="ghost"
+                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
+                    >
+                        <Database strokeWidth={2} size={23} />
+                        <span className="text-xs font-medium ml-1.5">Sectors</span>
+                    </Button>
+                    <span className="absolute -right-1/2 transform -translate-x-1/2 top-full mt-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        Coming soon
+                    </span>
+                </div>
+
+                <div className="relative group inline-block">
+                    <Button
+                        variant="ghost"
+                        className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 rounded-md"
+                    >
+                        <Settings strokeWidth={2} size={23} />
+                        <span className="text-xs font-medium ml-1.5">Settings</span>
+                    </Button>
+                    <span className="absolute -right-1/2 transform -translate-x-1/2 top-full mt-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        Coming soon
+                    </span>
+                </div>
             </div>
 
             {/* Right Section: Avatar and Download-like button */}
@@ -72,7 +83,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                     </Button>
                 )}
                 <Avatar className="h-7 w-7">
-                    <AvatarImage src="/ai/image/team/aditya.jpg" alt="Profile" />
+                    <AvatarImage src="/team/aditya.jpg" alt="Profile" />
                     <AvatarFallback>AD</AvatarFallback>
                 </Avatar>
             </div>

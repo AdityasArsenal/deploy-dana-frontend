@@ -1,50 +1,95 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight } from 'lucide-react';
 
-const HeroSection: React.FC = () => {
+import { Button } from '@/components/ui/Button';
+import { Brain, CircuitBoard, Cpu, Leaf, Globe, Zap, Trees, Building2 } from 'lucide-react';
+
+const HeroSection = () => {
   return (
-    <div className="relative bg-gradient-to-r from-emerald-50 to-teal-50 pt-28">
-      <div
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-5"
-      ></div>
-      <div className="container mx-auto px-4 py-24 md:py-30">
-        <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-block mb-4 px-4 py-1 bg-emerald-100 rounded-full text-emerald-800 text-sm font-medium animate-fade-in">
-            Research Project
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
-            Reimagining ESG Analysis<br />Through{' '}
-            <span className="text-emerald-600 relative">
-              AI Agents
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-emerald-600/30 transform -skew-x-12"></span>
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed">
-            We're a team of AI researchers exploring the potential of multi-agent systems to revolutionize ESG data analysis in India
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              to="/chat"
-              className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold transition duration-300 transform hover:scale-105 flex justify-center gap-2 shadow-lg shadow-emerald-200"
-            >
-              Try Demo <ChevronRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2 border border-gray-200"
-            >
-              Join Our Vision <ChevronRight className="w-5 h-5" />
-            </Link>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden atmospheric-bg">
+      {/* Atmospheric overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background/80"></div>
+      
+      {/* Floating AI elements with enhanced styling */}
+      <div className="absolute top-20 left-10 floating-slow opacity-60">
+        <div className="relative">
+          <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center backdrop-blur-sm border border-primary/30">
+            <Building2 strokeWidth={2} size={25} color="green" />
           </div>
         </div>
       </div>
-    </div>
+      
+      <div className="absolute top-40 right-20 floating-slow opacity-50" style={{ animationDelay: '2s' }}>
+        <div className="relative">
+          <div className="w-12 h-12 bg-gradient-to-br from-electric-cyan/20 to-electric-cyan/40 rounded-full flex items-center justify-center backdrop-blur-sm border border-electric-cyan/30">
+            <Zap className="w-6 h-6 text-electric-cyan" />
+          </div>
+        </div>
+      </div>
+      
+      <div className="absolute bottom-32 left-20 floating-slow opacity-40" style={{ animationDelay: '4s' }}>
+        <div className="relative">
+          <div className="w-20 h-20 bg-gradient-to-br from-soft-emerald/20 to-soft-emerald/40 rounded-full flex items-center justify-center backdrop-blur-sm border border-soft-emerald/30">
+            <Globe className="w-10 h-10 text-soft-emerald" />
+          </div>
+        </div>
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="animate-fade-in">
+          {/* Distance indicator like StormSeek */}
+          <div className="inline-flex items-center px-4 py-2 mb-8 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
+            <span className="text-primary font-medium">Research Project</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <div className="mb-7">Meet <span className="gradient-text">ESGai's AI Agents</span>:<br />
+            Reinventing ESG Compliance</div>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Three AI agents. One powerful solution.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button size="lg" className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-6 ">
+              Explore ESG Solutions
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-6 hover:text-white transition-colors duration-200 font-medium ">
+              Request Demo
+            </Button>
+          </div>
+
+          {/* Agent indicators with StormSeek-inspired design */}
+          <div className="flex justify-center items-center space-x-8 md:space-x-16">
+            <div className="flex flex-col items-center floating-slow">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <Brain className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <span className="text-sm font-medium text-primary">Manager</span>
+            </div>
+            
+            <div className="flex flex-col items-center floating-slow" style={{ animationDelay: '2s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <CircuitBoard className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <span className="text-sm font-medium text-electric-cyan">Worker</span>
+            </div>
+            
+            <div className="flex flex-col items-center floating-slow" style={{ animationDelay: '4s' }}>
+              <div className="w-20 h-20 bg-gradient-to-br from-primary/30 to-primary/60 rounded-full flex items-center justify-center mb-2 neon-glow backdrop-blur-sm border border-primary/40 relative">
+                <Cpu className="w-10 h-10 text-primary-foreground" />
+              </div>
+              <span className="text-sm font-medium text-soft-emerald">Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Atmospheric particles */}
+      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full pulse-green opacity-60"></div>
+      <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-electric-cyan rounded-full pulse-green opacity-40" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-soft-emerald rounded-full pulse-green opacity-80" style={{ animationDelay: '3s' }}></div>
+    </section>
   );
 };
 
 export default HeroSection;
-
-
-
-
