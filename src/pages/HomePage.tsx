@@ -20,7 +20,6 @@ const HomePage = () => {
       <RoadmapSection />
       <VisionSection />
       <ScopeSection />
-      <CTASection />
       <Footer />
     </div>
   );

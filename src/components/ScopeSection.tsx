@@ -41,10 +41,14 @@ const scopeFeatures = [
 ];
 
 const ScopeSection = () => (
-  <section className="py-20 bg-background/60">
+  <section className="py-20 bg-blue">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4">Research Scope</h2>
-      <p className="text-lg text-muted-foreground mb-10">Our MVP focuses on analyzing key ESG data sources</p>
+      <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <span className="gradient-text">Research Scope</span>
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mb-8 mx-auto">
+        Our MVP focuses on analyzing key ESG data sources
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {scopeFeatures.map((f) => (
           <div key={f.title} className="bg-card/50 border border-border rounded-xl p-6 text-left flex flex-col items-center">

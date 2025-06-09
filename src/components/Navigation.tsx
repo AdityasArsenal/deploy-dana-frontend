@@ -1,10 +1,12 @@
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Button } from '@/components/ui/Button';
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const isMobile = useIsMobile(); // Use this to adjust UI for mobile
 
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'The Agents', href: '#agents' },
+    { name: 'AI Agents', href: '#agents' },
     { name: 'Solutions', href: '#solutions' },
     { name: 'Roadmap', href: '#roadmap' },
   ];
@@ -25,14 +27,13 @@ const Navigation = () => {
           Mobile View
         </div>
       )}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16">
-          
-        <div className="hidden md:block flex items-center gap-4">
-            {/* ESGai logo top right, clickable and refreshes page */}
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="flex items-center h-16 w-full">
+          {/* Logo - always at far left */}
+          <div className="flex items-center">
             <button
-              className="ml-4 focus:outline-none hover:scale-105 transition-transform"
-              onClick={() => window.location.reload()}
+              className="focus:outline-none hover:scale-105 transition-transform"
+              onClick={() => navigate('/')}
               aria-label="Refresh page"
               style={{ background: 'none', border: 'none', padding: 0 }}
             >
@@ -44,9 +45,10 @@ const Navigation = () => {
               />
             </button>
           </div>
-          
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+
+          {/* Navigation links - center (hidden on mobile) */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -59,14 +61,20 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Spacer to push the button to the far right */}
-          <div className="flex-1" />
-          <a href="/contact">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect">
+          {/* Support Our Research button - far right */}
+          <div className="flex items-center ml-auto">
+            <a href="/contact">
+              <Button
+                className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect"
+                onClick={() => navigate('/contact')}
+              >
                 Support Our Research
               </Button>
             </a>
-          <div className="md:hidden">
+          </div>
+
+          {/* Mobile menu button - far right on mobile */}
+          <div className="md:hidden ml-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary"

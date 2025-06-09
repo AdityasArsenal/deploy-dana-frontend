@@ -2,7 +2,10 @@
 import { Button } from '@/components/ui/Button';
   import { Brain, CircuitBoard, Cpu, Globe, Zap, Building2 } from 'lucide-react';
 
+import { useNavigate } from 'react-router-dom';
+
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden atmospheric-bg">
       {/* Atmospheric overlay */}
@@ -45,17 +48,22 @@ const HeroSection = () => {
             Reinventing ESG Compliance</div>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Three AI agents. One powerful solution.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="/chat">
-            <Button size="lg" className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-7 ">
+            <Button
+              size="lg"
+              className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-7 "
+              onClick={() => navigate('/chat')}
+            >
               Try out ESGai
             </Button>
-            </a>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium ">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium ">
               Sign In
             </Button>
           </div>

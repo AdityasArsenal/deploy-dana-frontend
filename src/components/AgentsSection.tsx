@@ -1,37 +1,40 @@
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Brain, CircuitBoard, Cpu, ArrowRight, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
 const AgentsSection = () => {
   const [activeAgent, setActiveAgent] = useState(0);
+  const navigate = useNavigate();
 
   const agents = [
     {
       name: 'Manager Agent',
       icon: Brain,
-      description: 'Simplifies complex ESG queries and structures information for optimal processing.',
-      details: 'The Manager Agent acts as your intelligent interface, breaking down complex ESG questions into manageable components and ensuring that every query is properly structured for maximum accuracy.',
-      features: ['Query Optimization', 'Information Structuring', 'Context Management'],
+      description: 'Splits ESG queries into sub-questions for precise retrieval.',
+      details: 'The Manager Agent processes user queries by breaking them into sub-questions with keywords, enabling accurate vector search retrieval from ESG datasets.',
+      features: ['Query Breakdown', 'Keyword Extraction', 'Context Setup'],
       esgFocus: 'Environmental'
     },
     {
       name: 'Worker Agent',
       icon: CircuitBoard,
-      description: 'Retrieves context-rich insights from comprehensive ESG document databases.',
-      details: 'Using advanced hybrid search capabilities, the Worker Agent scans through vast ESG databases to find the most relevant information, combining semantic understanding with precise keyword matching.',
-      features: ['Hybrid Search', 'Document Analysis', 'Context Extraction'],
+      description: 'Fetches relevant insights from 1,000+ ESG reports.',
+      details: 'The Worker Agent retrieves context-rich data from a vectorized database of BRSR and XBRL reports, storing answers in Cosmos DB for further processing.',
+      features: ['Vector Search', 'Data Retrieval', 'Storage in Cosmos DB'],
       esgFocus: 'Social'
     },
     {
       name: 'Director Agent',
       icon: Cpu,
-      description: 'Generates final, accurate responses using advanced generative AI models.',
-      details: 'The Director Agent synthesizes all gathered information into coherent, actionable responses, ensuring accuracy and relevance while maintaining compliance with ESG standards.',
-      features: ['Response Generation', 'Quality Assurance', 'Compliance Validation'],
+      description: 'Combines insights into comprehensive ESG responses.',
+      details: 'The Director Agent consolidates Worker Agent answers into a final, tailored response, ensuring context accuracy using generative AI models like GPT-40.',
+      features: ['Insight Consolidation', 'Response Generation', 'Accuracy Check'],
       esgFocus: 'Governance'
     }
   ];
+
 
   const getESGColor = (focus: string) => {
     switch (focus) {
@@ -45,7 +48,7 @@ const AgentsSection = () => {
   return (
     <section id="agents" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Meet the <span className="gradient-text">AI Agents</span>
           </h2>
@@ -74,7 +77,7 @@ const AgentsSection = () => {
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   </div>
                   
-                  <div className="flex items-center mb-3">
+                  <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 relative ${
                       activeAgent === index
                         ? 'bg-gradient-to-br from-primary to-electric-blue'
@@ -142,10 +145,12 @@ const AgentsSection = () => {
                   <p className="text-foreground">{agents[activeAgent].details}</p>
                 </div>
                 
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover-glow relative">
+                <Button
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover-glow relative"
+                  onClick={() => navigate('/chat')}
+                >
                   <span>See {agents[activeAgent].name} Demo</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
-                  
                 </Button>
               </div>
             </div>

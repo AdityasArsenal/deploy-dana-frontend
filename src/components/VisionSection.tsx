@@ -8,13 +8,15 @@ const stats = [
 ];
 
 const VisionSection = () => (
-  <section className="py-20 bg-background/60">
+  <section className="py-20 bg-blue">
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Research Vision</h2>
-      <p className="text-lg text-muted-foreground mb-4">
+      <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        Our Research <span className="gradient-text">Vision</span>
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
         To develop AI agents that can analyze ESG reports from publicly listed companies from across the globe.
       </p>
-      <a href="#" className="text-primary underline mb-8 inline-block">Watch our video</a>
+      <a href="https://youtu.be/5-oBdge6Q78?si=p-no4ktAdDW-x-08" target="_blank" rel="noopener noreferrer" className="text-primary underline mb-8 inline-block">Watch our video</a>
       <div className="flex flex-col md:flex-row gap-8 justify-center mb-12 mt-8">
         <div className="bg-card/50 border border-border rounded-xl p-6 flex-1 min-w-[260px] text-left">
           <h3 className="font-semibold text-lg mb-2">The Challenge</h3>

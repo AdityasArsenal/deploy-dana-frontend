@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-card/30 border-t border-border/50 pt-16 pb-12 backdrop-blur-md">
+    <footer className="bg-card/30 border-t border-border/50 pt-16 pb-12 bg-blue backdrop-blur-md">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           {/* Brand Column */}
