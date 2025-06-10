@@ -42,6 +42,16 @@ app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+app.get('/blog', (req, res) => {
+    console.log(`Serving React app for route: ${req.path}`);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.get('/blog/:id', (req, res) => {
+    console.log(`Serving React app for route: ${req.path}`);
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Pure React Static Server running on port ${PORT}`);
