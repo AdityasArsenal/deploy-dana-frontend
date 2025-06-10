@@ -66,8 +66,8 @@ const AgentsSection = () => {
                   key={index}
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 border relative ${
                     activeAgent === index
-                      ? 'bg-primary/10 border-primary glow-effect'
-                      : 'bg-card/30 border-border hover:border-primary/50'
+                      ? 'bg-primary/10 border-primary text-white glow-effect'
+                      : 'bg-card/30 border-border'
                   }`}
                   onClick={() => setActiveAgent(index)}
                 >
@@ -83,7 +83,7 @@ const AgentsSection = () => {
                         ? 'bg-gradient-to-br from-primary to-electric-blue'
                         : 'bg-muted'
                     }`}>
-                      <IconComponent className={`w-6 h-6 ${
+                      <IconComponent className={`w-6 h-6 text-white ${
                         activeAgent === index ? 'text-primary-foreground' : 'text-muted-foreground'
                       }`} />
                     </div>

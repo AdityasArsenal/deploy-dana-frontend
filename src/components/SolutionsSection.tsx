@@ -25,7 +25,7 @@ const SolutionsSection = () => {
       icon: CheckCircle,
       solution: 'Precision Targeting',
       description: 'AI agents trained specifically on ESG frameworks deliver contextually accurate responses',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-primary to-electric-blue'
     },
     {
       icon: Zap,
@@ -37,7 +37,7 @@ const SolutionsSection = () => {
       icon: Shield,
       solution: 'Deep Intelligence',
       description: 'Hybrid search combines semantic understanding with regulatory knowledge for comprehensive insights',
-      color: 'from-purple-500 to-indigo-600'
+      color: 'from-primary to-electric-blue'
     }
   ];
 
@@ -91,7 +91,7 @@ const SolutionsSection = () => {
                 return (
                   <div
                     key={index}
-                    className="flex items-start p-6 bg-primary/10 border border-primary/20 rounded-xl hover:border-primary/40 transition-colors hover-glow"
+                    className="flex items-start p-6 bg-primary/10 border border-primary/15 rounded-xl hover:border-primary/40 transition-colors hover-glow"
                   >
                     <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mr-4 flex-shrink-0`}>
                       <IconComponent className="w-6 h-6 text-white" />
@@ -114,7 +114,7 @@ const SolutionsSection = () => {
             <p className="text-muted-foreground">Cost Reduction</p>
           </div>
           <div className="text-center p-6 bg-card/30 rounded-xl border border-border">
-            <div className="text-3xl font-bold gradient-text mb-2">95%</div>
+            <div className="text-3xl font-bold gradient-text mb-2">98%</div>
             <p className="text-muted-foreground">Accuracy Rate</p>
           </div>
           <div className="text-center p-6 bg-card/30 rounded-xl border border-border">

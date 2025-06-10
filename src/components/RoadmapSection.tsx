@@ -117,7 +117,7 @@ const RoadmapSection = () => {
                           : 'bg-muted'
                       }`}>
                         <IconComponent className={`w-6 h-6 ${
-                            item.status === 'completed' ? 'text-green-100' :
+                            item.status === 'completed' ? 'text-white' :
                             item.status === 'in-progress' ? 'text-primary-foreground' : 'text-muted-foreground'
                         }`} />
                       </div>

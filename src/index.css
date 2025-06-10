@@ -127,6 +127,23 @@
   font-weight: 700;
 }
 
+.prose {
+  max-width: none;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.blog-card img {
+  border-radius: 0.5rem;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+
 @layer utilities {
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-electric-cyan bg-clip-text text-transparent;
@@ -148,7 +165,17 @@
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgb(245, 255, 249), 0 0 40px rgba(245, 255, 249, 0.2);
+    box-shadow: 0 0 20px rgb(113, 216, 154), 0 0 40px rgba(113, 216, 154, 0.2);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(113, 216, 154, 0.6), 0 0 40px rgba(113, 216, 154, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(128, 213, 162, 0.6), 0 0 60px rgba(128, 213, 162, 0.3);
+    transform: translateY(-2px);
   }
 
   .hover-neon {
@@ -156,7 +183,7 @@
   }
 
   .hover-neon:hover {
-    box-shadow: 0 0 30px rgba(245, 255, 249, 0.6), 0 0 60px rgba(245, 255, 249, 0.3);
+    box-shadow: 0 0 30px rgba(128, 213, 162, 0.6), 0 0 60px rgba(128, 213, 162, 0.3);
     transform: translateY(-2px);
   }
 

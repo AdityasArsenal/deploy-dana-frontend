@@ -63,9 +63,14 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium ">
+              className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium hover:disabled:opacity-100"
+              disabled={false}
+            >
               Sign In
             </Button>
+            <span className="absolute -right-1/2 transform -translate-x-1/2 top-full mt-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        Coming soon
+            </span>
           </div>
 
           {/* Agent indicators with StormSeek-inspired design */}
