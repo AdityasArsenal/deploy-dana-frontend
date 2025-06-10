@@ -3,8 +3,10 @@ import { ChatUI } from '@/components/1ChatUII';
 import { Message } from '@/components/ui/ChatMessage';
 import { Sidebar } from '@/components/ui/Sidebar';
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import { useMediaQuery } from 'react-responsive';
 
 const ChatPage: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [conversationId, setConversationId] = useState<string | null>(null);
@@ -14,34 +16,12 @@ const ChatPage: React.FC = () => {
         setMessages([]);
         setConversationId(null);
         setCurrentPdfUrl(null);
-        setIsLoading(false); // Also reset loading state if any
-        // Optionally, add a greeting message after reset
-        // setMessages([
-        //     {
-        //         id: 'initial-greeting-reset',
-        //         text: 'Session reset. How can I help you?',
-        //         sender: 'ai',
-        //         timestamp: new Date(),
-        //     },
-        // ]);
+        setIsLoading(false);
     };
 
     const handlePageRefresh = () => {
         window.location.reload();
     };
-
-    // useEffect(() => {
-    //     // Initial greeting from AI
-    //     setMessages([
-    //         {
-    //             id: 'initial-greeting',
-    //             text: 'Hello! How can I help you with ESG insights today?',
-    //             sender: 'ai',
-    //             timestamp: new Date(),
-    //         },
-    //     ]);
-    // }, []);
-
     const handleSendMessage = async (text: string) => {
         const userMessage: Message = {
             id: `user-${Date.now()}`,
@@ -123,7 +103,7 @@ const ChatPage: React.FC = () => {
                         />
                     </Panel>
                     <PanelResizeHandle style={{ width: '4px', background: '#ccc' }} />
-                    <Panel defaultSize={70} minSize={30} maxSize={70}>
+                    <Panel defaultSize={70} minSize={30} maxSize={70} style={{ display: isMobile ? 'none' : 'block' }}>
                         <iframe
                             title="The loaded one "
                             width="100%"
