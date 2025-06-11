@@ -52,25 +52,26 @@ const HeroSection = () => {
             Three AI agents. One powerful solution.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
               size="lg"
-              className="bg-primary mr-8 text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-7 "
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover-neon text-lg px-12 py-7 w-full sm:w-auto"
               onClick={() => navigate('/chat')}
             >
               Try out ESGai
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium hover:disabled:opacity-100"
-              disabled={false}
-            >
-              Sign In
-            </Button>
-            <span className="absolute -right-1/2 transform -translate-x-1/2 top-full mt-2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        Coming soon
-            </span>
+            <div className="relative group">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 text-lg px-12 py-7 hover:text-white transition-colors duration-200 font-medium w-full sm:w-auto"
+              >
+                Sign In
+              </Button>
+              <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-max bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                Coming soon
+              </span>
+            </div>
           </div>
 
           {/* Agent indicators with StormSeek-inspired design */}

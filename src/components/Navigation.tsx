@@ -23,17 +23,12 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       {/* Example: Mobile-only banner using useIsMobile */}
-      {isMobile && (
-        <div className="md:hidden bg-primary text-primary-foreground text-center py-1 text-xs">
-          Mobile View
-        </div>
-      )}
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex items-center h-16 w-full">
           {/* Logo - always at far left */}
           <div className="flex items-center">
             <button
-              className="focus:outline-none hover:scale-105 transition-transform"
+              className="focus:outline-none hover:scale-105 transition-transform ml-8"
               onClick={() => navigate('/')}
               aria-label="Refresh page"
               style={{ background: 'none', border: 'none', padding: 0 }}
@@ -66,7 +61,7 @@ const Navigation = () => {
           <div className="flex items-center ml-auto">
             <a href="/contact">
               <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect mr-8"
                 onClick={() => navigate('/contact')}
               >
                 Support Our Research
