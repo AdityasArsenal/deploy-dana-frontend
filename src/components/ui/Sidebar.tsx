@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from './Button';
 import { Avatar, AvatarFallback, AvatarImage } from './Avatar';
-import { Search, Settings, Database, Leaf, Plus, Download, MessageSquare } from 'lucide-react';
+import { Search, Settings, Database, Leaf, Plus, Download, MessageSquare, Linkedin } from 'lucide-react';
 import { Toast } from './Toast';
 
 interface SidebarProps {
@@ -42,6 +42,11 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
             setShowFeedbackForm(false);
         }
     };
+
+    const handleChatWithUs = () => {
+        window.open('https://www.linkedin.com/company/106447186', '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <>
             {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
@@ -94,6 +99,19 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                             Coming soon
                         </span>
                     </div>
+
+                    {/* Chat with us Button */}
+                    <div className="relative group inline-block">
+                        <Button
+                            variant="ghost"
+                            onClick={handleChatWithUs}
+                            className="w-auto h-auto flex items-center justify-center px-2 py-1.5 text-gray-400 hover:bg-gray-700 hover:text-white rounded-md"
+                        >
+                            <Linkedin strokeWidth={2} size={23} />
+                            <span className="text-xs font-medium py-2 pt-2.5">Chat with us</span>
+                        </Button>
+                    </div>
+
                     {/* Feedback Button with Glow */}
                     <div className="relative group inline-block">
                         <Button
