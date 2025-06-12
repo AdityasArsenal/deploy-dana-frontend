@@ -52,8 +52,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
             {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
             <div className="flex items-center justify-between w-full h-14 px-5 border-b border-gray-800 bg-black font-sans">
                 {/* Left Section: Logo and main navigation icons */}
-                <div className="flex-1 min-w-0 overflow-x-auto whitespace-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                    <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5">
                     <Button
                         variant="ghost"
                         className="w-auto h-auto flex items-center justify-center text-gray-400 p-1.5"
@@ -137,10 +136,9 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                         )}
                     </div>
                 </div>
-                </div>
 
                 {/* Right Section: Avatar and Download-like button */}
-                <div className="flex items-center gap-2 pl-4">
+                <div className="flex items-center gap-2">
                     {pdfUrl ? (
                         <a
                             href={pdfUrl}

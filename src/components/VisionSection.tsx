@@ -3,7 +3,7 @@ import React from 'react';
 const stats = [
   { label: 'Companies in Dataset', value: '1000+' },
   { label: 'AI Agents Developed', value: '3' },
-  { label: 'Development Stage', value: 'MVP' },
+  { label: 'processing speed', value: '12s' },
   { label: 'Query Accuracy', value: '98%' },
 ];
 
@@ -11,7 +11,7 @@ const VisionSection = () => (
   <section className="py-20 bg-blue">
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 className="text-3xl md:text-5xl font-bold mb-6">
-        Our Research <span className="gradient-text">Vision</span>
+        Our <span className="gradient-text">Vision</span>
       </h2>
       <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
         To develop AI agents that can analyze ESG reports from publicly listed companies from across the globe.

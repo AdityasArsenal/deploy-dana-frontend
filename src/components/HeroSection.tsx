@@ -40,12 +40,12 @@ const HeroSection = () => {
         <div className="animate-fade-in">
           {/* Distance indicator like StormSeek */}
           <div className="inline-flex items-center px-4 py-2 mb-8 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-primary font-medium">Research Project</span>
+            <span className="text-primary font-medium">Sustainability AI Consultant</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <div className="mb-7">Meet <span className="gradient-text">ESGai's AI Agents</span>:<br />
-            Reinventing ESG Compliance</div>
+            <div className="mb-7">Your personalised <span className="gradient-text">AI consultant</span>:<br />
+            for ESG analytics</div>
           </h1>
           
           <p className="text-xl md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">

@@ -15,7 +15,7 @@ const AgentsSection = () => {
       description: 'Splits ESG queries into sub-questions for precise retrieval.',
       details: 'The Manager Agent processes user queries by breaking them into sub-questions with keywords, enabling accurate vector search retrieval from ESG datasets.',
       features: ['Query Breakdown', 'Keyword Extraction', 'Context Setup'],
-      esgFocus: 'Environmental'
+      esgFocus: 'Query breakdown'
     },
     {
       name: 'Worker Agent',
@@ -23,7 +23,7 @@ const AgentsSection = () => {
       description: 'Fetches relevant insights from 1,000+ ESG reports.',
       details: 'The Worker Agent retrieves context-rich data from a vectorized database of BRSR and XBRL reports, storing answers in Cosmos DB for further processing.',
       features: ['Vector Search', 'Data Retrieval', 'Storage in Cosmos DB'],
-      esgFocus: 'Social'
+      esgFocus: 'Retrieves data'
     },
     {
       name: 'Director Agent',
@@ -31,7 +31,7 @@ const AgentsSection = () => {
       description: 'Combines insights into comprehensive ESG responses.',
       details: 'The Director Agent consolidates Worker Agent answers into a final, tailored response, ensuring context accuracy using generative AI models like GPT-40.',
       features: ['Insight Consolidation', 'Response Generation', 'Accuracy Check'],
-      esgFocus: 'Governance'
+      esgFocus: 'contextual consolidation'
     }
   ];
 
@@ -90,7 +90,7 @@ const AgentsSection = () => {
                     <div className="flex flex-col">
                       <h3 className="text-xl font-semibold text-foreground">{agent.name}</h3>
                       <span className={`text-sm ${getESGColor(agent.esgFocus)} font-medium`}>
-                        {agent.esgFocus} Focus
+                        {agent.esgFocus} 
                       </span>
                     </div>
                   </div>

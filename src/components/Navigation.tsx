@@ -13,11 +13,11 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/#about' },
-    { name: 'AI Agents', href: '/#agents' },
     { name: 'Solutions', href: '/#solutions' },
+    { name: 'AI Agents', href: '/#agents' },
     { name: 'Roadmap', href: '/#roadmap' },
-    { name: 'Blog', href: '/blog' }
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact us', href: '/contact' }
   ];
 
   return (
@@ -59,14 +59,12 @@ const Navigation = () => {
 
           {/* Support Our Research button - far right */}
           <div className="hidden md:flex items-center ml-auto">
-            <a href="/contact">
               <Button
                 className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect mr-8"
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/chat')}
               >
-                Support Our Research
+                Get Started
               </Button>
-            </a>
           </div>
 
           {/* Mobile menu button - far right on mobile */}

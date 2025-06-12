@@ -19,7 +19,7 @@ const HomePage = () => {
       <SolutionsSection />
       <RoadmapSection />
       <VisionSection />
-      <ScopeSection />
+      {/* <ScopeSection /> */}
       <Footer />
     </div>
   );
