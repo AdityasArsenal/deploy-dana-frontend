@@ -16,13 +16,13 @@ const Footer: React.FC = () => {
               Exploring the future of ESG analysis through innovative AI research and multi-agent systems.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://github.com/AdityasArsenal/deploy-dana-frontend" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">
+              <a href="https://github.com/AdityasArsenal/deploy-dana" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">
                 <Github className="w-5 h-5" />
               </a>
               <a href="https://x.com/cryptorohittt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/in/cryptorohittt?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/company/106447186" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://mail.google.com/mail/?view=cm&to=esgai.space@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 transform hover:scale-110">

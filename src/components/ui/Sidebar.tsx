@@ -145,7 +145,7 @@ export function Sidebar({ pdfUrl, onResetSession, onRefreshPage }: SidebarProps)
                             target="_blank"
                             rel="noopener noreferrer"
                             download
-                            className="w-auto h-auto text-gray-400 flex items-center justify-center p-1.5 hover:bg-gray-700 rounded-md"
+                            className="w-auto h-auto text-gray-400 flex items-center justify-center p-1.5 hover:bg-gray-700 rounded-md animate-pulse-glow"
                         >
                             <Download strokeWidth={2} size={23} />
                         </a>
