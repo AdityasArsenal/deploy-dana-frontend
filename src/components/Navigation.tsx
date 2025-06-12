@@ -58,7 +58,7 @@ const Navigation = () => {
           </div>
 
           {/* Support Our Research button - far right */}
-          <div className="flex items-center ml-auto">
+          <div className="hidden md:flex items-center ml-auto">
             <a href="/contact">
               <Button
                 className="bg-primary text-primary-foreground hover:bg-primary/90 glow-effect mr-8"
@@ -70,7 +70,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button - far right on mobile */}
-          <div className="md:hidden ml-4">
+          <div className="md:hidden ml-20 pl-20">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary"
@@ -93,8 +93,14 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
-                Request Demo
+              <Button
+                className="w-full mt-4 bg-transparent border border-primary text-primary hover:bg-primary/10"
+                onClick={() => {
+                  navigate('/contact');
+                  setIsOpen(false);
+                }}
+              >
+                Support Our Research
               </Button>
             </div>
           </div>

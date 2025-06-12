@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center justify-center">
               <img src="/icons/logo.png" alt="ESGai Logo" className="h-10 w-auto rounded-lg shadow-md" />
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-center">
               Exploring the future of ESG analysis through innovative AI research and multi-agent systems.
             </p>
             <div className="flex items-center gap-4">
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 mt-8 border-t border-border/50 w-full">
+          <div className="pt-8 mt-8 border-t border-border/50 w-full text-center">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <p className="text-muted-foreground">© 2025 <span className="gradient-text font-semibold">ESGai Research Project</span>. All rights reserved.</p>
               <div className="flex gap-6">
