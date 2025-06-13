@@ -10,28 +10,28 @@ const AgentsSection = () => {
 
   const agents = [
     {
-      name: 'Manager Agent',
+      name: 'Agent 1',
       icon: Brain,
       description: 'Splits ESG queries into sub-questions for precise retrieval.',
-      details: 'The Manager Agent processes user queries by breaking them into sub-questions with keywords, enabling accurate vector search retrieval from ESG datasets.',
+      details: 'The first Agent processes user queries by understanding user requirements and breaking them into sub-questions. Enabling accurate vector search for the second agent.',
       features: ['Query Breakdown', 'Keyword Extraction', 'Context Setup'],
-      esgFocus: 'Query breakdown'
+      esgFocus: 'User query breakdown'
     },
     {
-      name: 'Worker Agent',
+      name: 'Agent 2',
       icon: CircuitBoard,
       description: 'Fetches relevant insights from 1,000+ ESG reports.',
-      details: 'The Worker Agent retrieves context-rich data from a vectorized database of BRSR and XBRL reports, storing answers in Cosmos DB for further processing.',
+      details: 'The second agent retrieves context-rich data of all the sub-questions received from agent one from a vectorized BRSR and XML report dataset received from NSE and prepares them for the third agent.',
       features: ['Vector Search', 'Data Retrieval', 'Storage in Cosmos DB'],
       esgFocus: 'Retrieves data'
     },
     {
-      name: 'Director Agent',
+      name: 'Agent 3',
       icon: Cpu,
-      description: 'Combines insights into comprehensive ESG responses.',
-      details: 'The Director Agent consolidates Worker Agent answers into a final, tailored response, ensuring context accuracy using generative AI models like GPT-40.',
+      description: 'Understands all data provided by agent two comprehensively.',
+      details: 'The third agent consolidates all the sub-queries from agent two and gains a deep understanding of the context before tailoring a custom response to the user, ensuring accuracy using generative models like GPT-4o.',
       features: ['Insight Consolidation', 'Response Generation', 'Accuracy Check'],
-      esgFocus: 'contextual consolidation'
+      esgFocus: 'Deep contextual consolidation'
     }
   ];
 
@@ -50,7 +50,7 @@ const AgentsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Meet the <span className="gradient-text">AI Agents</span>
+            How <span className="gradient-text">Esgai Works</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Three specialized AI agents working in perfect harmony to deliver unparalleled ESG insights

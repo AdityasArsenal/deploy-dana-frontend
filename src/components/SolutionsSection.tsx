@@ -5,38 +5,38 @@ const SolutionsSection = () => {
   const challenges = [
     {
       icon: AlertTriangle,
-      problem: 'Irrelevant Outputs',
-      description: 'Generic AI tools provide broad answers that miss industry-specific nuances'
+      problem: 'Time-Consuming',
+      description: 'Manual reading and report preparation takes significant time.'
     },
     {
       icon: DollarSign,
-      problem: 'High Costs',
-      description: 'Traditional ESG consulting is expensive and time-consuming for businesses'
+      problem: 'Repetitive',
+      description: 'Humans must re-read content repeatedly to ensure completeness.'
     },
     {
       icon: Search,
-      problem: 'Shallow Results',
-      description: 'Surface-level analysis fails to capture the depth required for ESG compliance'
+      problem: 'Error-Prone',
+      description: 'Manual processes increase the risk of misinformation.'
     }
   ];
 
   const solutions = [
     {
       icon: CheckCircle,
-      solution: 'Precision Targeting',
-      description: 'AI agents trained specifically on ESG frameworks deliver contextually accurate responses',
+      solution: 'Cost & Time Efficient',
+      description: 'Ask about any listed company and get answers in seconds.',
       color: 'from-primary to-electric-blue'
     },
     {
       icon: Zap,
-      solution: 'Cost Efficiency',
-      description: 'Automated processing reduces consulting costs by up to 80% while improving speed',
+      solution: 'Deep Intelligence',
+      description: 'ESGai leverages advanced models to understand queries and deliver precise answers.',
       color: 'from-primary to-electric-blue'
     },
     {
       icon: Shield,
-      solution: 'Deep Intelligence',
-      description: 'Hybrid search combines semantic understanding with regulatory knowledge for comprehensive insights',
+      solution: 'Reliable',
+      description: 'Trained on thousands of reports to ensure accurate responses.',
       color: 'from-primary to-electric-blue'
     }
   ];
@@ -46,10 +46,10 @@ const SolutionsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Solving Real <span className="gradient-text">ESG Challenges</span>
+            <span className="gradient-text">Personal intern </span>for ESG consultants
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We identified the core problems in ESG compliance and built AI solutions that address each one
+          We identified the core problems in ESG compliance and built AI solutions that act like a personal intern.
           </p>
         </div>
 
@@ -110,15 +110,15 @@ const SolutionsSection = () => {
         {/* Stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="text-center p-6 bg-card/30 rounded-xl border border-border">
-            <div className="text-3xl font-bold gradient-text mb-2">80%</div>
-            <p className="text-muted-foreground">Cost Reduction</p>
+            <div className="text-3xl font-bold gradient-text mb-2">95%</div>
+            <p className="text-muted-foreground">time Reduction</p>
           </div>
           <div className="text-center p-6 bg-card/30 rounded-xl border border-border">
             <div className="text-3xl font-bold gradient-text mb-2">98%</div>
             <p className="text-muted-foreground">Accuracy Rate</p>
           </div>
           <div className="text-center p-6 bg-card/30 rounded-xl border border-border">
-            <div className="text-3xl font-bold gradient-text mb-2">10x</div>
+            <div className="text-3xl font-bold gradient-text mb-2">8s</div>
             <p className="text-muted-foreground">Faster Processing</p>
           </div>
         </div>
