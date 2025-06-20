@@ -42,11 +42,6 @@ const BlogPostPage: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-electric-blue bg-clip-text text-transparent">
             {post.title}
           </h1>
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-auto max-h-[500px] object-cover rounded-lg mb-6 border border-primary/20"
-          />
           <p className="text-sm text-primary/70 mb-6">{new Date(post.date).toLocaleDateString()}</p>
           <div className="prose prose-invert prose-lg max-w-none">
             <ReactMarkdown
@@ -57,6 +52,7 @@ const BlogPostPage: React.FC = () => {
                 strong: ({ node, ...props }) => <strong className="font-semibold text-foreground/90" {...props} />,
                 ul: ({ node, ...props }) => <ul className="list-disc space-y-3 my-6 ml-6" {...props} />,
                 li: ({ children }) => <li className="text-lg text-muted-foreground leading-relaxed">{children}</li>,
+                img: ({ node, ...props }) => <img className="w-full h-auto object-cover rounded-lg border border-primary/20 my-4" {...props} alt={props.alt || ''} />
               }}
             >
               {post.content}
