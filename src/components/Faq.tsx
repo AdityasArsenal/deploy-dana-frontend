@@ -23,24 +23,24 @@ import {
             <AccordionItem value="item-1" className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover-neon">
               <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
                 <div className="flex items-center">
-                  <Zap className="w-5 h-5 text-primary mr-3" />
-                  What is ESGai?
+                  <MessageSquare className="w-5 h-5 text-primary mr-3" />
+                  What is ESGai.Space?
                 </div>
               </AccordionTrigger>
               <AccordionContent className="p-6 pt-0 text-muted-foreground">
-                ESGai is an advanced AI-powered platform that analyzes ESG (Environmental, Social, and Governance) data from over 1,000 companies. It uses a Retrieval-Augmented Generation (RAG) framework to provide precise, context-rich insights from complex datasets like NSE's BRSR and XBRL reports.
+              ESGai.Space is an AI-powered ESG tool that automates ESG reporting and analysis for 1000+ Indian listed companies, helping businesses and consultants make smarter sustainability decisions.
               </AccordionContent>
             </AccordionItem>
   
             <AccordionItem value="item-2" className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover-neon">
               <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
                 <div className="flex items-center">
-                  <ShieldCheck className="w-5 h-5 text-primary mr-3" />
-                  How does the AI work?
+                  <MessageSquare className="w-5 h-5 text-primary mr-3" />
+                  How does ESGai.Space work?
                 </div>
               </AccordionTrigger>
               <AccordionContent className="p-6 pt-0 text-muted-foreground">
-                Our system uses a multi-agent approach—Manager, Worker, and Director—to break down your queries, retrieve relevant information from a vast database of ESG reports, and synthesize clear, actionable answers. This ensures both accuracy and depth in the insights provided.
+              The platform uses advanced AI agents to scan and analyze thousands of ESG reports, instantly delivering accurate, data-driven ESG insights tailored for Indian markets.
               </AccordionContent>
             </AccordionItem>
   
@@ -48,16 +48,52 @@ import {
               <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
                 <div className="flex items-center">
                   <MessageSquare className="w-5 h-5 text-primary mr-3" />
-                  Can I integrate the data with other tools?
+                  What are the key features of ESGai.Space?
                 </div>
               </AccordionTrigger>
               <AccordionContent className="p-6 pt-0 text-muted-foreground">
-                Yes! ESGai is designed for seamless integration with tools like Power BI and Azure. You can export data and visualizations to fit your existing workflow, enabling real-time trend analysis and reporting.
+              Main features include automated ESG data extraction, real-time benchmarking, KPI comparison, and visual reporting—designed specifically for Indian companies and ESG consultants.
               </AccordionContent>
             </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
+
+            <AccordionItem value="item-4" className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover-neon">
+              <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
+                <div className="flex items-center">
+                  <MessageSquare className="w-5 h-5 text-primary mr-3" />
+                  Who should use ESGai.Space?
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="p-6 pt-0 text-muted-foreground">
+              ESGai.Space is perfect for ESG consultants, sustainability teams, and Indian organizations seeking fast, reliable ESG research and compliance across 1000+ listed companies.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover-neon">
+                <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
+                  <div className="flex items-center">
+                    <MessageSquare className="w-5 h-5 text-primary mr-3" />
+                    How does ESGai.Space ensure data accuracy?
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="p-6 pt-0 text-muted-foreground">
+                The tool leverages Microsoft Azure’s secure cloud, combining keyword and vector search to deliver up-to-date, trustworthy ESG data from verified Indian company reports.
+                </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl hover-neon">
+                <AccordionTrigger className="p-6 text-lg font-semibold text-foreground hover:no-underline">
+                  <div className="flex items-center">
+                    <MessageSquare className="w-5 h-5 text-primary mr-3" />
+                    Is ESGai.Space free to use?
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="p-6 pt-0 text-muted-foreground">
+                Yes, ESGai.Space is currently free. You can access and use the AI ESG consultant for Indian listed companies at no cost.
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+    </div>
+  </section>
     );
   };
   
