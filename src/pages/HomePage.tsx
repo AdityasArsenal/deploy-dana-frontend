@@ -8,6 +8,7 @@ import SolutionsSection from '../components/SolutionsSection';
 import RoadmapSection from '../components/RoadmapSection';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
+import Faq from '../components/Faq';
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <AgentsSection />
       <SolutionsSection />
       <RoadmapSection />
+      <Faq />
       <VisionSection />
       {/* <ScopeSection /> */}
       <Footer />
