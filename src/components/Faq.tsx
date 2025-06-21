@@ -4,7 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/accordion";
-  import { MessageSquare, ShieldCheck, Zap } from 'lucide-react';
+  import { MessageSquare } from 'lucide-react';
   
   const Faq = () => {
     return (
