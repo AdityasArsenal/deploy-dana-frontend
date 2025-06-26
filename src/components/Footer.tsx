@@ -39,6 +39,7 @@ const Footer: React.FC = () => {
                 <Link to="/policies#privacy" className="text-muted-foreground hover:text-primary transition duration-300 text-sm">Privacy Policy</Link>
                 <Link to="/policies#terms" className="text-muted-foreground hover:text-primary transition duration-300 text-sm">Terms of Use</Link>
                 <Link to="/policies#cookies" className="text-muted-foreground hover:text-primary transition duration-300 text-sm">Cookie Policy</Link>
+                <a href="https://bit.ly/pitch-deck-esgai" target='_blank' rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition duration-300 text-sm">Pitch Deck</a>
               </div>
             </div>
           </div>
